@@ -31,9 +31,9 @@ export default function Hero() {
       <input type="checkbox" id="play-modal" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">{decks.length > 0 ? "Choose Deck" : "Error"}</h3>
+          <h3 className="font-bold text-lg">{decks!.length > 0 ? "Choose Deck" : "Error"}</h3>
           <p className="py-4">
-            {decks.length > 0 ?
+            {decks!.length > 0 ?
               "deck picker uwu"
               :
               "You don't have any decks yet. Create one first."}
