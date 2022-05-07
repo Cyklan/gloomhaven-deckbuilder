@@ -1,11 +1,14 @@
 import type { NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import Image from 'next/image'
-import Card from '../cards/components/Card'
-import BottomCardContainer from '../components/BottomCardContainer'
-import styles from '../styles/Home.module.css'
+import useLocalStorage from '../hooks/useLocalStorage'
+import { Card } from '../model/Card'
+import { LocalStorageKeys } from "../model/LocalStorageKeys"
+
+const Hero = dynamic(() => import("../components/Hero"), { ssr: false})
 
 const Home: NextPage = () => {
+
   return (
     <div>
       <Head>
@@ -14,7 +17,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="grid grid-cols-2 mb-24">
+      <Hero />
+
+      {/* <main className="grid grid-cols-2 lg:grid-cols-4 mb-24">
+        <DeckBuildingCardContainer />
         <Card />
         <Card />
         <Card />
@@ -25,10 +31,9 @@ const Home: NextPage = () => {
         <Card />
         <Card />
         <Card />
-        <BottomCardContainer />
-      </main>
+      </main> */}
     </div>
   )
 }
 
-export default Home
+export default Home;
