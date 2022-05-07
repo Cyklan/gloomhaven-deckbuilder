@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { Card } from "../model/Card";
@@ -6,7 +7,6 @@ import { LocalStorageKeys } from "../model/LocalStorageKeys";
 export default function Hero() {
 
   const [decks] = useLocalStorage<Card[][]>(LocalStorageKeys.decks, []);
-  const [errorIsOpen, setErrorIsOpen] = useState(false);
 
   return (
     <>
@@ -19,9 +19,14 @@ export default function Hero() {
             <p className="py-6">
               Time to ditch the cards and play Gloomhaven digitally!
               <div id="actions" className="flex justify-evenly items-center mt-4" >
-                <button className="btn btn-primary uppercase tracking-widest">
+                <Link href="/decks">
+                  <a className="btn btn-primary uppercase tracking-widest">
+                    Decks
+                  </a>
+                </Link>
+                {/* <button className="btn btn-primary uppercase tracking-widest">
                   Decks
-                </button>
+                </button> */}
                 <label htmlFor="play-modal" className="btn btn-primary uppercase tracking-widest">Play</label>
               </div>
             </p>
@@ -39,7 +44,7 @@ export default function Hero() {
               "You don't have any decks yet. Create one first."}
           </p>
           <div className="modal-action">
-            <label htmlFor="play-modal" className="btn">Cancel</label>
+            <label htmlFor="play-modal" className="btn capitalize">Cancel</label>
           </div>
         </div>
       </div>
