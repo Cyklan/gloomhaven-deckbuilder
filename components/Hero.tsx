@@ -24,9 +24,6 @@ export default function Hero() {
                     Decks
                   </a>
                 </Link>
-                {/* <button className="btn btn-primary uppercase tracking-widest">
-                  Decks
-                </button> */}
                 <label htmlFor="play-modal" className="btn btn-primary uppercase tracking-widest">Play</label>
               </div>
             </p>
