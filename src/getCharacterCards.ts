@@ -2,12 +2,13 @@ import { Characters } from "../model/Characters";
 
 import berserker from "../model/cards/berserker.json";
 import brute from "../model/cards/brute.json";
+import beasttyrant from "../model/cards/beasttyrant.json";
 import { CardList } from "../model/CardList";
 
 export function getCharacterCards(character: Characters) {
   switch (character) {
     case Characters.BeastTyrant:
-      return;
+      return beasttyrant as CardList;
     case Characters.Berserker:
       return berserker as CardList;
     case Characters.Brute:

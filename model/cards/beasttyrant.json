@@ -1,0 +1,237 @@
+{
+  "path": "bt",
+  "cards": [
+    {
+      "title": "Ancient Ward",
+      "imgName": "ancient-ward.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 4
+    },
+    {
+      "title": "Blood Hunger",
+      "imgName": "blood-hunger.png",
+      "counter": 5,
+      "losable": false,
+      "permanent": false,
+      "level": 6
+    },
+    {
+      "title": "Borrowed Essence",
+      "imgName": "borrowed-essence.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Concentrated Rage",
+      "imgName": "concentrated-rage.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 1
+    },
+    {
+      "title": "Disappearing Wounds",
+      "imgName": "disappearing-wounds.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Disorienting Roar",
+      "imgName": "disorienting-roar.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Earthen Spikes",
+      "imgName": "earthen-spikes.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 2
+    },
+    {
+      "title": "Energizing Strike",
+      "imgName": "energizing-strike.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 2
+    },
+    {
+      "title": "Focused Aggression",
+      "imgName": "focused-aggression.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Forceful Swipe",
+      "imgName": "forceful-swipe.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Howling Bolts",
+      "imgName": "howling-bolts.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Jaws of Death",
+      "imgName": "jaws-of-death.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 9
+    },
+    {
+      "title": "Lash Out",
+      "imgName": "lash-out.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 8
+    },
+    {
+      "title": "Maul",
+      "imgName": "maul.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Natural Remedy",
+      "imgName": "natural-remedy.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 8
+    },
+    {
+      "title": "Patch Fur",
+      "imgName": "patch-fur.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Primal Blessing",
+      "imgName": "primal-blessing.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 6
+    },
+    {
+      "title": "Punch Through",
+      "imgName": "punch-through.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 4
+    },
+    {
+      "title": "Rampage",
+      "imgName": "rampage.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Relentless Ally",
+      "imgName": "relentless-ally.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 1
+    },
+    {
+      "title": "Soaring Ally",
+      "imgName": "soaring-ally.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 0
+    },
+    {
+      "title": "Spirit Swap",
+      "imgName": "spirit-swap.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Stone Sigil",
+      "imgName": "stone-sigil.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 5
+    },
+    {
+      "title": "Storm Sigil",
+      "imgName": "storm-sigil.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 7
+    },
+    {
+      "title": "Tribal Sigil",
+      "imgName": "tribal-sigil.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 9
+    },
+    {
+      "title": "Tyrannical Force",
+      "imgName": "tyrannical-force.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 7
+    },
+    {
+      "title": "Unstoppable Beast",
+      "imgName": "unstoppable-beast.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 3
+    },
+    {
+      "title": "Venomous Ally",
+      "imgName": "venomous-ally.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 1
+    },
+    {
+      "title": "Vicious Ally",
+      "imgName": "vicious-ally.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 3
+    }
+  ]
+}
