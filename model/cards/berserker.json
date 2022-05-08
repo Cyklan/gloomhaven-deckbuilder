@@ -1,0 +1,237 @@
+{
+  "path": "be",
+  "cards": [
+    {
+      "title": "Blood Pact",
+      "imgName": "blood-pact.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 1
+    },
+    {
+      "title": "Bone Breaker",
+      "imgName": "bone-breaker.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 8
+    },
+    {
+      "title": "Bounce Back",
+      "imgName": "bounce-back.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Break the Chains",
+      "imgName": "break-the-chains.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 2
+    },
+    {
+      "title": "Burning Hatred",
+      "imgName": "burning-hatred.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 7
+    },
+    {
+      "title": "Careless Charge",
+      "imgName": "careless-charge.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 7
+    },
+    {
+      "title": "Cauterize",
+      "imgName": "cauterize.png",
+      "counter": 4,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Dazing Wound",
+      "imgName": "dazing-wound.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Defiance of Death",
+      "imgName": "defiance-of-death.png",
+      "counter": 3,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Devil Horns",
+      "imgName": "devil-horns.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 6
+    },
+    {
+      "title": "Fatal Fury",
+      "imgName": "fatal-fury.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Final Fight",
+      "imgName": "final-fight.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 5
+    },
+    {
+      "title": "Flurry of Axes",
+      "imgName": "flurry-of-axes.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 4
+    },
+    {
+      "title": "From the Brink",
+      "imgName": "from-the-brink.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Furious Aid",
+      "imgName": "furious-aid.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Glass Hammer",
+      "imgName": "glass-hammer.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Growing Rage",
+      "imgName": "growing-rage.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Immortality",
+      "imgName": "immortality.png",
+      "counter": 5,
+      "losable": false,
+      "permanent": false,
+      "level": 9
+    },
+    {
+      "title": "Numb the Pain",
+      "imgName": "numb-the-pain.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Reckless Offensive",
+      "imgName": "reckless-offensive.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 2
+    },
+    {
+      "title": "Resolute Stand",
+      "imgName": "resolute-stand.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Seeing Red",
+      "imgName": "seeing-red.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 5
+    },
+    {
+      "title": "Shiny Distraction",
+      "imgName": "shiny-distraction.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 4
+    },
+    {
+      "title": "Spiked Armor",
+      "imgName": "spiked-armor.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 3
+    },
+    {
+      "title": "Strength in Agony",
+      "imgName": "strength-in-agony.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "The Maw of Madness",
+      "imgName": "the-maw-of-madness.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 9
+    },
+    {
+      "title": "Unbridled Power",
+      "imgName": "unbridled-power.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 0
+    },
+    {
+      "title": "Unstoppable Destruction",
+      "imgName": "unstoppable-destruction.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 6
+    },
+    {
+      "title": "Vengeful Barrage",
+      "imgName": "vengeful-barrage.png",
+      "counter": 5,
+      "losable": false,
+      "permanent": false,
+      "level": 8
+    }
+  ]
+}

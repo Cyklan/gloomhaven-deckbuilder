@@ -9,12 +9,18 @@ import { LocalStorageKeys } from "../model/LocalStorageKeys";
 import Close from "../components/icons/img/close.svg"
 import { CharacterSelect } from "../components/CharacterSelect";
 import { useState } from "react";
+import { DeckBuilder } from "../components/subpages/DeckBuilder";
 
 const Decks: NextPage = () => {
 
-  const [decks, setDecks] = useLocalStorage<Deck[]>(LocalStorageKeys.decks, []);
+  const [decks, _] = useLocalStorage<Deck[]>(LocalStorageKeys.decks, []);
   const [selectedCharacter, setSelectedCharacter] = useState<CharacterWithId>(CharactersList[0]);
   const [newDeckName, setNewDeckName] = useState("");
+  const [createDeckView, setCreateDeckView] = useState(false);
+
+  if (createDeckView) {
+    return <DeckBuilder character={selectedCharacter.character} deckName={newDeckName} />
+  }
 
   return (
     <>
@@ -63,7 +69,12 @@ const Decks: NextPage = () => {
           <span>Name</span>
           <input type="text" value={newDeckName} onChange={e => setNewDeckName(e.target.value)} className="input block text-base w-full border-[1px] border-white rounded-md" placeholder="Deck Name" />
           <div className="absolute bottom-4 flex justify-center left-1/2 -translate-x-1/2 ">
-            <button disabled={newDeckName.length === 0} className="btn btn-primary uppercase tracking-widest">Create Deck</button>
+            <button
+              className="btn btn-primary uppercase tracking-widest"
+              disabled={newDeckName.length === 0}
+              onClick={() => setCreateDeckView(true)} >
+              Create Deck
+            </button>
           </div>
         </div>
       </div>

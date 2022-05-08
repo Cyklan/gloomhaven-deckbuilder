@@ -1,0 +1,237 @@
+{
+  "path": "br",
+  "cards": [
+    {
+      "title": "Balanced Measure",
+      "imgName": "balanced-measure.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Brute Force",
+      "imgName": "brute-force.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 3
+    },
+    {
+      "title": "Crippling Offensive",
+      "imgName": "crippling-offensive.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Defensive Tactics",
+      "imgName": "defensive-tactics.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": true,
+      "level": 7
+    },
+    {
+      "title": "Devastating Hack",
+      "imgName": "devastating-hack.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 4
+    },
+    {
+      "title": "Eye for an Eye",
+      "imgName": "eye-for-an-eye.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Face Your End",
+      "imgName": "face-your-end.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 9
+    },
+    {
+      "title": "Fatal Advance",
+      "imgName": "fatal-advance.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 2
+    },
+    {
+      "title": "Frenzied Onslaught",
+      "imgName": "frenzied-onslaught.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 8
+    },
+    {
+      "title": "Grab and Go",
+      "imgName": "grab-and-go.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Hook and Chain",
+      "imgName": "hook-and-chain.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 3
+    },
+    {
+      "title": "Immovable Phalanx",
+      "imgName": "immovable-phalanx.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 6
+    },
+    {
+      "title": "Juggernaut",
+      "imgName": "juggernaut.png",
+      "counter": 3,
+      "losable": false,
+      "permanent": false,
+      "level": 2
+    },
+    {
+      "title": "King of the Hill",
+      "imgName": "king-of-the-hill.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 9
+    },
+    {
+      "title": "Leaping Cleave",
+      "imgName": "leaping-cleave.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Overwhelming Assault",
+      "imgName": "overwhelming-assault.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Provoking Roar",
+      "imgName": "provoking-roar.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Quietus",
+      "imgName": "quietus.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 6
+    },
+    {
+      "title": "Selfish Retribution",
+      "imgName": "selfish-retribution.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 8
+    },
+    {
+      "title": "Shield Bash",
+      "imgName": "shield-bash.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Skewer",
+      "imgName": "skewer.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Skirmishing Maneuver",
+      "imgName": "skirmishing-maneuver.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 5
+    },
+    {
+      "title": "Spare Dagger",
+      "imgName": "spare-dagger.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Sweeping Blow",
+      "imgName": "sweeping-blow.png",
+      "counter": 0,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Trample",
+      "imgName": "trample.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Unstoppable Charge",
+      "imgName": "unstoppable-charge.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 4
+    },
+    {
+      "title": "Wall of Doom",
+      "imgName": "wall-of-doom.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 0
+    },
+    {
+      "title": "Warding Strength",
+      "imgName": "warding-strength.png",
+      "counter": 6,
+      "losable": false,
+      "permanent": false,
+      "level": 1
+    },
+    {
+      "title": "Whirlwind",
+      "imgName": "whirlwind.png",
+      "counter": 0,
+      "losable": true,
+      "permanent": false,
+      "level": 5
+    }
+  ]
+}

@@ -5,4 +5,5 @@ export interface Card {
   losable: boolean;
   lost: boolean;
   level: number;
+  permanent: boolean;
 }
