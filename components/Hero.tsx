@@ -16,7 +16,7 @@ export default function Hero() {
             <h1 className="text-5xl font-bold">
               Gloomhaven Deckbuilder
             </h1>
-            <p className="py-6">
+            <div className="py-6">
               Time to ditch the cards and play Gloomhaven digitally!
               <div id="actions" className="flex justify-evenly items-center mt-4" >
                 <Link href="/decks">
@@ -26,7 +26,7 @@ export default function Hero() {
                 </Link>
                 <label htmlFor="play-modal" className="btn btn-primary uppercase tracking-widest">Play</label>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       </div >

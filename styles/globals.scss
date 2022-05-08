@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pirata One";
+  src: url("/pirata.ttf");
+}
+
+html,
+body {
+  @apply bg-base-200;
+  padding: 0;
+  margin: 0;
+  font-family: "Pirata One", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.react-select-container {
+  @apply mb-4;
+
+  & > .react-select__control {
+    @apply bg-base-200;
+  }
+
+  & > .react-select__control--is-focused {
+    border-color: hsl(0, 0%, 80%);
+    box-shadow: none;
+  }
+
+  & > .react-select__menu {
+    @apply bg-base-200;
+
+    & .react-select__option {
+      @apply bg-base-200 text-inherit;
+    }
+  }
+
+  & .react-select__single-value {
+    @apply text-inherit;
+  }
+}
