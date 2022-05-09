@@ -3,23 +3,24 @@ import dynamic from "next/dynamic";
 import { DeckCard } from "../components/DeckCard";
 import AddIcon from "../components/icons/img/add.svg"
 import useLocalStorage from "../hooks/useLocalStorage";
-import { Characters, CharactersList, CharacterWithId } from "../model/Characters";
+import { Characters } from "../model/Characters";
 import { Deck } from "../model/Deck";
 import { LocalStorageKeys } from "../model/LocalStorageKeys";
 import Close from "../components/icons/img/close.svg"
 import { CharacterSelect } from "../components/CharacterSelect";
 import { useState } from "react";
 import { DeckBuilder } from "../components/subpages/DeckBuilder";
+import { Character, CharacterList } from "../model/Characters";
 
 const Decks: NextPage = () => {
 
   const [decks, _] = useLocalStorage<Deck[]>(LocalStorageKeys.decks, []);
-  const [selectedCharacter, setSelectedCharacter] = useState<CharacterWithId>(CharactersList[0]);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character>(CharacterList[0]);
   const [newDeckName, setNewDeckName] = useState("");
   const [createDeckView, setCreateDeckView] = useState(false);
 
   if (createDeckView) {
-    return <DeckBuilder character={selectedCharacter.character} deckName={newDeckName} />
+    return <DeckBuilder character={selectedCharacter} deckName={newDeckName} />
   }
 
   return (
@@ -65,7 +66,7 @@ const Decks: NextPage = () => {
           </label>
           <h3 className="text-lg uppercase tracking-widest">New Deck</h3>
           <span>Character</span>
-          <CharacterSelect value={selectedCharacter} onChange={(value) => setSelectedCharacter(value as CharacterWithId)} />
+          <CharacterSelect value={selectedCharacter} onChange={(value) => setSelectedCharacter(value)} />
           <span>Name</span>
           <input type="text" value={newDeckName} onChange={e => setNewDeckName(e.target.value)} className="input block text-base w-full border-[1px] border-white rounded-md" placeholder="Deck Name" />
           <div className="absolute bottom-4 flex justify-center left-1/2 -translate-x-1/2 ">

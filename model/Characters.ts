@@ -1,3 +1,8 @@
+import { CardList } from "./CardList";
+import beastTyrantCards from "./cards/beasttyrant.json";
+import berserkerCards from "./cards/berserker.json";
+import bruteCards from "./cards/brute.json"
+
 export enum Characters {
   BeastTyrant = "Beast Tyrant",
   Berserker = "Berserker",
@@ -18,78 +23,40 @@ export enum Characters {
   Tinkerer = "Tinkerer",
 }
 
-export type CharacterWithId = {
-  character: Characters;
+export interface Character {
   id: number;
+  name: Characters;
+  prefix: string;
+  cards: CardList;
+  handLimit: number;
 }
 
-export const CharactersList: CharacterWithId[] = [
-  {
-    character: Characters.BeastTyrant,
-    id: 1,
-  },
-  {
-    character: Characters.Berserker,
-    id: 2,
-  },
-  {
-    character: Characters.Brute,
-    id: 3,
-  },
-  {
-    character: Characters.Cragheart,
-    id: 4,
-  },
-  {
-    character: Characters.Doomstalker,
-    id: 5,
-  },
-  {
-    character: Characters.Elementalist,
-    id: 6,
-  },
-  {
-    character: Characters.Mindthief,
-    id: 7,
-  },
-  {
-    character: Characters.Nightshroud,
-    id: 8,
-  },
-  {
-    character: Characters.Plagueherald,
-    id: 9,
-  },
-  {
-    character: Characters.Quartermaster,
-    id: 10,
-  },
-  {
-    character: Characters.Sawbones,
-    id: 11,
-  },
-  {
-    character: Characters.Scoundrels,
-    id: 12,
-  },
-  {
-    character: Characters.Soothsinger,
-    id: 13,
-  },
-  {
-    character: Characters.Spellweaver,
-    id: 14,
-  },
-  {
-    character: Characters.Summoner,
-    id: 15,
-  },
-  {
-    character: Characters.Sunkeeper,
-    id: 16,
-  },
-  {
-    character: Characters.Tinkerer,
-    id: 17,
-  },
+export const BeastTyrant: Character = {
+  id: 1,
+  name: Characters.BeastTyrant,
+  prefix: "bt",
+  cards: beastTyrantCards as CardList,
+  handLimit: 10
+}
+
+export const Berserker: Character = {
+  id: 2,
+  name: Characters.Berserker,
+  prefix: "be",
+  cards: berserkerCards as CardList,
+  handLimit: 10
+}
+
+export const Brute: Character = {
+  id: 3,
+  name: Characters.Brute,
+  prefix: "br",
+  cards: bruteCards as CardList,
+  handLimit: 10
+}
+
+export const CharacterList = [
+  BeastTyrant,
+  Berserker,
+  Brute
 ]

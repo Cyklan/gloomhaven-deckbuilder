@@ -18,20 +18,6 @@ const Home: NextPage = () => {
       </Head>
 
       <Hero />
-
-      {/* <main className="grid grid-cols-2 lg:grid-cols-4 mb-24">
-        <DeckBuildingCardContainer />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </main> */}
     </div>
   )
 }

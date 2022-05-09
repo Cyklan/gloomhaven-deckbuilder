@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 import { Characters } from "../../model/Characters";
+import { Character } from "../../model/Characters";
 
 import Berserker from "./characters/berserker.svg";
 import Doomstalker from "./characters/doomstalker.svg";
@@ -12,9 +13,9 @@ import Tinkerer from "./characters/tinkerer.svg";
 
 
 
-export const CharacterIcon: FC<{ character: Characters, className: string }> = ({ character, className }) => {
+export const CharacterIcon: FC<{ character: Character, className: string }> = ({ character, className }) => {
 
-  switch (character) {
+  switch (character.name) {
     case Characters.Berserker:
       return <Berserker className={className} />
     case Characters.Doomstalker:
