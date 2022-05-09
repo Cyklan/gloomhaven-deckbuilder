@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { DeckCard } from "../components/DeckCard";
 import AddIcon from "../components/icons/img/add.svg"
 import useLocalStorage from "../hooks/useLocalStorage";
-import { Characters } from "../model/Characters";
+import { BeastTyrant, Berserker, Brute, Characters } from "../model/Characters";
 import { Deck } from "../model/Deck";
 import { LocalStorageKeys } from "../model/LocalStorageKeys";
 import Close from "../components/icons/img/close.svg"
@@ -34,23 +34,18 @@ const Decks: NextPage = () => {
             {decks?.map((deck) => <DeckCard deck={deck} key={Math.random()} />)}
             <DeckCard deck={{
               cards: [],
-              character: Characters.Berserker,
+              character: Berserker,
               title: Characters.Berserker
             }} />
             <DeckCard deck={{
               cards: [],
-              character: Characters.Tinkerer,
+              character: BeastTyrant,
               title: "My great Deck"
             }} />
             <DeckCard deck={{
               cards: [],
-              character: Characters.Elementalist,
-              title: "Ooga Booga Caveman"
-            }} />
-            <DeckCard deck={{
-              cards: [],
-              character: Characters.Doomstalker,
-              title: "Default Deck Name"
+              character: Brute,
+              title: "Et tu, Brute?"
             }} />
           </div>
         </div>
