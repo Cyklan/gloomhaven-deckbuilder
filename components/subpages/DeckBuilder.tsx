@@ -14,12 +14,17 @@ interface DeckBuilderProps {
   deckName: string;
   closeDeckBuilder: () => void;
   save: (deck: Deck) => void;
+  editDeck?: Deck;
 }
 
-export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDeckBuilder, save }) => {
+export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDeckBuilder, save, editDeck }) => {
 
-  const [unusedCards, setUnusedCards] = useState(character.cards.cards.sort((a, b) => a.level - b.level));
-  const [deck, setDeck] = useState<CardModel[]>([]);
+  const [unusedCards, setUnusedCards] = useState(editDeck != null ? 
+      character.cards.cards.
+        sort((a, b) => a.level - b.level)
+        .filter(x => !editDeck.cards.some(y => x.title === y.title))  
+    : character.cards.cards.sort((a, b) => a.level - b.level));
+  const [deck, setDeck] = useState<CardModel[]>(editDeck?.cards || []);
   const [selectedCard, setSelectedCard] = useState<CardModel | null>(null)
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -118,7 +123,7 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
       <DeckBuilderSidebar save={() => {
         // save deck
         const newDeck: Deck = {
-          title: deckName,
+          title: deckName.length > 0 ? deckName : editDeck!.title,
           cards: deck,
           character: character 
         }
