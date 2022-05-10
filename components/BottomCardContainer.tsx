@@ -38,7 +38,7 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick }
         <div className={styles["card-grid"]}>
           {cardElements}
         </div>
-        <div className={`${!open ? "hidden" : "fixed bottom-2 left-1/2 -translate-x-1/2"}`}>
+        <div className={`${!open ? "hidden" : "fixed bottom-4 left-1/2 -translate-x-1/2"}`}>
           <button
             className="btn btn-primary tracking-widest uppercase"
             onClick={() => {

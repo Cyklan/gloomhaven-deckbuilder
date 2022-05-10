@@ -1,24 +1,27 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 import Card from "../../cards/components/Card";
 import { Card as CardModel } from "../../model/Card";
-import { CardList } from "../../model/CardList";
-import { getCharacterCards } from "../../src/getCharacterCards";
 import DeckBuildingCardContainer from "../BottomCardContainer";
-
 import Menu from "../icons/img/menu.svg";
 import Close from "../icons/img/close.svg"
 import { Character } from "../../model/Characters";
 import toast from "react-hot-toast";
+import { DeckBuilderSidebar } from "../DeckBuilderSidebar";
+import { Deck } from "../../model/Deck";
+
 interface DeckBuilderProps {
   character: Character;
   deckName: string;
+  closeDeckBuilder: () => void;
+  save: (deck: Deck) => void;
 }
 
-export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName }) => {
+export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDeckBuilder, save }) => {
 
   const [unusedCards, setUnusedCards] = useState(character.cards.cards.sort((a, b) => a.level - b.level));
   const [deck, setDeck] = useState<CardModel[]>([]);
   const [selectedCard, setSelectedCard] = useState<CardModel | null>(null)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openModalRef = useRef<HTMLInputElement>(null);
 
@@ -61,9 +64,9 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName }) => {
 
   return (
     <>
-      <div className="w-screen min-h-screen bg-base-200">
+      <div className={`w-screen min-h-screen bg-base-200 ${sidebarOpen ? "overflow-hidden max-h-screen" : ""}`}>
         <div className="flex w-full justify-around items-center h-24 bg-base-200 fixed top-0 z-10">
-          <button className="btn btn-square btn-primary">
+          <button className="btn btn-square btn-primary" onClick={() => setSidebarOpen(true)}>
             <Menu />
           </button>
           <span className="text-xl">{deckName}</span>
@@ -112,6 +115,16 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName }) => {
           </div>
         </div>
       </div>
+      <DeckBuilderSidebar save={() => {
+        // save deck
+        const newDeck: Deck = {
+          title: deckName,
+          cards: deck,
+          character: character 
+        }
+
+        save(newDeck);
+      }} exit={closeDeckBuilder} open={sidebarOpen} close={() => setSidebarOpen(false)} />
     </>
   )
 }

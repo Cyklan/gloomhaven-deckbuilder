@@ -14,14 +14,29 @@ import { Character, CharacterList } from "../model/Characters";
 
 const Decks: NextPage = () => {
 
-  const [decks, _] = useLocalStorage<Deck[]>(LocalStorageKeys.decks, []);
+  const [decks, setDecks] = useLocalStorage<Deck[]>(LocalStorageKeys.decks, []);
   const [selectedCharacter, setSelectedCharacter] = useState<Character>(CharacterList[0]);
   const [newDeckName, setNewDeckName] = useState("");
   const [createDeckView, setCreateDeckView] = useState(false);
 
-  if (createDeckView) {
-    return <DeckBuilder character={selectedCharacter} deckName={newDeckName} />
+  function closeDeckBuilder() {
+    setCreateDeckView(false)
+    setNewDeckName("");
+    setSelectedCharacter(CharacterList[0]);
   }
+
+  if (createDeckView) {
+    return <DeckBuilder
+      closeDeckBuilder={closeDeckBuilder} 
+      character={selectedCharacter} 
+      deckName={newDeckName}
+      save={(deck) => {
+        setDecks([...(decks || []), deck]);
+        closeDeckBuilder();
+      }} />
+  }
+
+  const deckCards = decks?.map(deck => <DeckCard deck={deck} key={deck.title + "deck"} />)
 
   return (
     <>
@@ -31,22 +46,7 @@ const Decks: NextPage = () => {
             Decks
           </h1>
           <div className="flex-auto w-full min-h-full pt-4 items-center overflow-y-auto pb-12">
-            {decks?.map((deck) => <DeckCard deck={deck} key={Math.random()} />)}
-            <DeckCard deck={{
-              cards: [],
-              character: Berserker,
-              title: Characters.Berserker
-            }} />
-            <DeckCard deck={{
-              cards: [],
-              character: BeastTyrant,
-              title: "My great Deck"
-            }} />
-            <DeckCard deck={{
-              cards: [],
-              character: Brute,
-              title: "Et tu, Brute?"
-            }} />
+            {deckCards}
           </div>
         </div>
         <label htmlFor="add-deck-modal" className="fixed bottom-8 right-8 btn btn-square btn-primary">
@@ -63,7 +63,7 @@ const Decks: NextPage = () => {
           <span>Character</span>
           <CharacterSelect value={selectedCharacter} onChange={(value) => setSelectedCharacter(value)} />
           <span>Name</span>
-          <input type="text" value={newDeckName} onChange={e => setNewDeckName(e.target.value)} className="input block text-base w-full border-[1px] border-white rounded-md" placeholder="Deck Name" />
+          <input maxLength={20} type="text" value={newDeckName} onChange={e => setNewDeckName(e.target.value)} className="input block text-base w-full border-[1px] border-white rounded-md" placeholder="Deck Name" />
           <div className="absolute bottom-4 flex justify-center left-1/2 -translate-x-1/2 ">
             <button
               className="btn btn-primary uppercase tracking-widest"
