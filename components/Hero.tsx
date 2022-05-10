@@ -1,16 +1,28 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { Card } from "../model/Card";
 import { LocalStorageKeys } from "../model/LocalStorageKeys";
+import { DeckPicker } from "./DeckPicker";
+import { HelpModal } from "./HelpModal";
+import Help from "./icons/img/help.svg";
 
 export default function Hero() {
 
-  const [decks] = useLocalStorage<Card[][]>(LocalStorageKeys.decks, []);
+  const [showHelp, setShowHelp] = useState(false);
+  const modalToggle = useRef<HTMLInputElement>(null);
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200 relative">
+        <button 
+          className="btn btn-square btn-primary absolute top-4 right-4"
+          onClick={() => {
+            setShowHelp(true);
+            modalToggle.current?.click();
+          }} >
+          <Help />
+        </button>
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">
@@ -24,26 +36,23 @@ export default function Hero() {
                     Decks
                   </a>
                 </Link>
-                <label htmlFor="play-modal" className="btn btn-primary uppercase tracking-widest">Play</label>
+                <button
+                  onClick={() => {
+                    setShowHelp(false);
+                    modalToggle.current?.click();
+                  }}
+                  className="btn btn-primary uppercase tracking-widest">Play</button>
               </div>
             </div>
           </div>
         </div>
       </div >
-      <input type="checkbox" id="play-modal" className="modal-toggle" />
+      <input ref={modalToggle} type="checkbox" id="play-modal" className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">{decks!.length > 0 ? "Choose Deck" : "Error"}</h3>
-          <p className="py-4">
-            {decks!.length > 0 ?
-              "deck picker uwu"
-              :
-              "You don't have any decks yet. Create one first."}
-          </p>
-          <div className="modal-action">
-            <label htmlFor="play-modal" className="btn capitalize">Cancel</label>
-          </div>
-        </div>
+        {showHelp ? <HelpModal close={() => {
+          setShowHelp(false);
+          modalToggle.current?.click();
+        }} /> : <DeckPicker />}
       </div>
     </>
   )
