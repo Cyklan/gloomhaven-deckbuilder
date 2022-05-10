@@ -100,7 +100,14 @@ const Decks: NextPage = () => {
               }}>
                 Edit
               </button>
-              <button className="btn btn-outline w-2/3 uppercase tracking-widest">
+              <button onClick={() => {
+                const _decks = [...decks!];
+                _decks.splice(_decks.indexOf(selectedDeck), 1);
+                setDecks(_decks);
+                modalToggle.current?.click();
+                setSelectedDeck(undefined);
+                setSelectedCharacter(CharacterList[0]);
+              }} className="btn btn-outline w-2/3 uppercase tracking-widest">
                 Delete
               </button>
             </div>
