@@ -1,19 +1,53 @@
+import { useEffect, useRef, useState } from "react";
 import Card from "../cards/components/Card";
 import { Card as CardModel } from "../model/Card";
-import { Character } from "../model/Characters";
-
+import styles from "../styles/BottomCardContainer.module.scss";
+import Close from "./icons/img/close.svg";
 interface BottomCardContainerProps {
   cards: CardModel[];
   prefix: string;
+  cardOnClick: (card: CardModel) => void;
 }
 
-export default function DeckBuildingCardContainer({ cards, prefix }: BottomCardContainerProps) {
+export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick }: BottomCardContainerProps) {
 
-  const cardElements = cards.map(x => <Card key={Math.random()} card={x} imagePath={`/cards/${prefix}/${x.imgName}`} />);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (cards.length === 0) {
+      setOpen(false);
+    }
+  }, [cards])
+
+  const cardElements = cards.map(x => <Card
+    card={x}
+    className={!open ? "pointer-events-none" : ""}
+    key={Math.random()}
+    imagePath={`/cards/${prefix}/${x.imgName}`} 
+    onClick={() => {
+      cardOnClick(x)
+    }} />);
 
   return (
-    <div className={`${cards.length > 0 ? "max-h-16" : "h-16"} border-t-2 lg:h-screen lg:min-h-screen bg-base-200 border-base-content lg:border-t-0 lg:border-r-2 w-screen lg:w-1/4 fixed bottom-0 lg:bottom-auto grid grid-cols-5 lg:grid-cols-1 overflow-hidden lg:overflow-y-auto z-10`}>
-      {cardElements}
-    </div>
-  )
+    <>
+      <div onClick={() => {
+        if (!open && cards.length > 0) {
+          setOpen(true);
+        }
+      }} className={`${styles.container} ${cards.length > 0 ? styles["has-content"] : ""} ${open ? styles.open : ""}`}>
+        <div className={styles["card-grid"]}>
+          {cardElements}
+        </div>
+        <div className={`${!open ? "hidden" : "fixed bottom-2 left-1/2 -translate-x-1/2"}`}>
+          <button
+            className="btn btn-primary tracking-widest uppercase"
+            onClick={() => {
+              setOpen(false);
+            }}>
+            Close
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }
