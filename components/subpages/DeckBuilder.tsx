@@ -58,13 +58,21 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
     openModalRef.current?.click();
   }
 
-  const cardViewCards = unusedCards.map(x =>
-    <Card
+  const cardViewCards = unusedCards.map(x => {
+
+    const isDisabled = (x.level > 1
+      && deck.filter(y => x.level === y.level).length > 0
+      && !deck.includes(x)
+    );
+
+    return (<Card
       key={Math.random()}
       card={x}
       imagePath={`/cards/${character.prefix}/${x.imgName}`}
       onClick={() => openCardView(x)}
-    />
+      className={isDisabled ? "grayscale" : ""}
+    />);
+  }
   );
 
   return (
@@ -74,8 +82,8 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
           <button className="btn btn-square btn-primary" onClick={() => setSidebarOpen(true)}>
             <Menu />
           </button>
-          <span className="text-xl">{deckName}</span>
-          <div className="text-xl aspect-square w-12 flex items-center justify-center">{deck.length} / {character.handLimit}</div>
+          <span className="text-xl">{deckName || editDeck?.title}</span>
+          <div className={`text-xl aspect-square w-12 flex items-center justify-center ${deck.length === character.handLimit ? "text-red-500" : ""}`}>{deck.length} / {character.handLimit}</div>
         </div>
         <main className="grid grid-cols-2 lg:grid-cols-4 py-24">
           <DeckBuildingCardContainer
@@ -103,7 +111,7 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
                   <button
                     className="btn btn-primary max-w-max uppercase tracking-widest"
                     disabled={
-                      deck.length === character.handLimit
+                      (deck.length === character.handLimit && !deck.includes(selectedCard))
                       ||
                       (selectedCard.level > 1
                         && deck.filter(x => x.level === selectedCard.level).length > 0
