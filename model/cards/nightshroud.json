@@ -1,0 +1,646 @@
+{
+  "path": "nightshroud",
+  "cards": [
+    {
+      "title": "Angel Of Death",
+      "imgName": "angel-of-death.png",
+      "counter": 0,
+      "losable": true,
+      "level": 9,
+      "initiative": 38,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 133,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 396,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Armor Of The Night",
+      "imgName": "armor-of-the-night.png",
+      "counter": 0,
+      "losable": false,
+      "level": 3,
+      "initiative": 23,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 259,
+          "y": 402,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 287,
+          "y": 402,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Black Arrow",
+      "imgName": "black-arrow.png",
+      "counter": 0,
+      "losable": false,
+      "level": 5,
+      "initiative": 11,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 252,
+          "y": 158,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Black Knives",
+      "imgName": "black-knives.png",
+      "counter": 4,
+      "losable": false,
+      "level": 1,
+      "initiative": 44,
+      "permanent": true,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Claws Of The Night",
+      "imgName": "claws-of-the-night.png",
+      "counter": 4,
+      "losable": false,
+      "level": 5,
+      "initiative": 26,
+      "permanent": true,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 224,
+          "y": 161,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Cloak Of Shade",
+      "imgName": "cloak-of-shade.png",
+      "counter": 0,
+      "losable": false,
+      "level": 1,
+      "initiative": 13,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 263,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 290,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Concealed Dominance",
+      "imgName": "concealed-dominance.png",
+      "counter": 0,
+      "losable": true,
+      "level": 0,
+      "initiative": 35,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Dancing Shadows",
+      "imgName": "dancing-shadows.png",
+      "counter": 0,
+      "losable": false,
+      "level": 1,
+      "initiative": 9,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 263,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Dark Cloud",
+      "imgName": "dark-cloud.png",
+      "counter": 0,
+      "losable": false,
+      "level": 0,
+      "initiative": 74,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Doomed Breeze",
+      "imgName": "doomed-breeze.png",
+      "counter": 0,
+      "losable": false,
+      "level": 1,
+      "initiative": 15,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 144,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 252,
+          "y": 172,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Empowering Void",
+      "imgName": "empowering-void.png",
+      "counter": 0,
+      "losable": false,
+      "level": 1,
+      "initiative": 21,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Enervating Wound",
+      "imgName": "enervating-wound.png",
+      "counter": 0,
+      "losable": true,
+      "level": 1,
+      "initiative": 77,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 123,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 259,
+          "y": 189,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Eyes Of The Night",
+      "imgName": "eyes-of-the-night.png",
+      "counter": 0,
+      "losable": false,
+      "level": 7,
+      "initiative": 35,
+      "permanent": true,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Gloom Darts",
+      "imgName": "gloom-darts.png",
+      "counter": 0,
+      "losable": false,
+      "level": 8,
+      "initiative": 78,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 252,
+          "y": 161,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 259,
+          "y": 413,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 288,
+          "y": 413,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Grim Sustenance",
+      "imgName": "grim-sustenance.png",
+      "counter": 0,
+      "losable": false,
+      "level": 4,
+      "initiative": 29,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Lurking Ruin",
+      "imgName": "lurking-ruin.png",
+      "counter": 0,
+      "losable": false,
+      "level": 8,
+      "initiative": 18,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Nightfall",
+      "imgName": "nightfall.png",
+      "counter": 3,
+      "losable": false,
+      "level": 4,
+      "initiative": 73,
+      "permanent": true,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Prepare For The Kill",
+      "imgName": "prepare-for-the-kill.png",
+      "counter": 0,
+      "losable": false,
+      "level": 2,
+      "initiative": 7,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 293,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 413,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 288,
+          "y": 413,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Quiet Frenzy",
+      "imgName": "quiet-frenzy.png",
+      "counter": 0,
+      "losable": false,
+      "level": 7,
+      "initiative": 19,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Silent Force",
+      "imgName": "silent-force.png",
+      "counter": 0,
+      "losable": true,
+      "level": 1,
+      "initiative": 9,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 263,
+          "y": 417,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Smoke Step",
+      "imgName": "smoke-step.png",
+      "counter": 0,
+      "losable": false,
+      "level": 1,
+      "initiative": 28,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 260,
+          "y": 413,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 288,
+          "y": 413,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Soulfire",
+      "imgName": "soulfire.png",
+      "counter": 0,
+      "losable": true,
+      "level": 2,
+      "initiative": 85,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 252,
+          "y": 165,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 265,
+          "y": 427,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 294,
+          "y": 427,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Spirit Of The Night",
+      "imgName": "spirit-of-the-night.png",
+      "counter": 0,
+      "losable": true,
+      "level": 1,
+      "initiative": 84,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 262,
+          "y": 416,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 288,
+          "y": 416,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Swallowed By Fear",
+      "imgName": "swallowed-by-fear.png",
+      "counter": 0,
+      "losable": false,
+      "level": 6,
+      "initiative": 90,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Terror Blade",
+      "imgName": "terror-blade.png",
+      "counter": 0,
+      "losable": false,
+      "level": 3,
+      "initiative": 17,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 252,
+          "y": 207,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Unseen Dread",
+      "imgName": "unseen-dread.png",
+      "counter": 0,
+      "losable": false,
+      "level": 6,
+      "initiative": 5,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 293,
+          "y": 168,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 420,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Voice Of The Night",
+      "imgName": "voice-of-the-night.png",
+      "counter": 5,
+      "losable": false,
+      "level": 9,
+      "initiative": 6,
+      "permanent": true,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 262,
+          "y": 396,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 265,
+          "y": 438,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Wings Of The Night",
+      "imgName": "wings-of-the-night.png",
+      "counter": 4,
+      "losable": false,
+      "level": 0,
+      "initiative": 24,
+      "permanent": true,
+      "recoverable": true,
+      "enhancementPositions": []
+    }
+  ]
+}

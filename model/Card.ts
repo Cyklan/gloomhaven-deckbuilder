@@ -3,7 +3,8 @@ export interface Card {
   imgName: string;
   counter: number;
   losable: boolean;
-  lost: boolean;
+  lost?: boolean;
   level: number;
   permanent: boolean;
+  recoverable: boolean;
 }

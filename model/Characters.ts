@@ -2,6 +2,8 @@ import { CardList } from "./CardList";
 import beastTyrantCards from "./cards/beasttyrant.json";
 import berserkerCards from "./cards/berserker.json";
 import bruteCards from "./cards/brute.json"
+import nightshroudCards from "./cards/nightshroud.json";
+import quartermasterCards from "./cards/quartermaster.json";
 
 export enum Characters {
   BeastTyrant = "Beast Tyrant",
@@ -15,7 +17,7 @@ export enum Characters {
   Plagueherald = "Plagueherald",
   Quartermaster = "Quartermaster",
   Sawbones = "Sawbones",
-  Scoundrels = "Scoundrels",
+  Scoundrel = "Scoundrel",
   Soothsinger = "Soothsinger",
   Spellweaver = "Spellweaver",
   Summoner = "Summoner",
@@ -55,8 +57,26 @@ export const Brute: Character = {
   handLimit: 10
 }
 
+export const Nightshroud: Character = {
+  id: 4,
+  name: Characters.Nightshroud,
+  prefix: "ns",
+  cards: nightshroudCards as CardList,
+  handLimit: 9
+}
+
+export const Quartermaster: Character = {
+  id: 5,
+  name: Characters.Quartermaster,
+  prefix: "qm",
+  cards: quartermasterCards as CardList,
+  handLimit: 9
+}
+
 export const CharacterList = [
   BeastTyrant,
   Berserker,
-  Brute
+  Brute,
+  Nightshroud,
+  Quartermaster
 ]
