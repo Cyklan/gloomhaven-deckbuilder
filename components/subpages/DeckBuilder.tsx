@@ -66,7 +66,7 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
     );
 
     return (<Card
-      key={Math.random()}
+      key={`${x.title}-card-deckbuilder`}
       card={x}
       imagePath={`/cards/${character.prefix}/${x.imgName}`}
       onClick={() => openCardView(x)}

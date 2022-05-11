@@ -22,7 +22,7 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick }
   const cardElements = cards.map(x => <Card
     card={x}
     className={!open ? "pointer-events-none" : ""}
-    key={Math.random()}
+    key={`${x.title}-card`}
     imagePath={`/cards/${prefix}/${x.imgName}`} 
     onClick={() => {
       cardOnClick(x)

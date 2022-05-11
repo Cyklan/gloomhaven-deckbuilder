@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200 relative">
+      <div className="hero min-h-screen bg-base-200 overflow-hidden relative">
         <button 
           className="btn btn-square btn-primary absolute top-4 right-4"
           onClick={() => {
