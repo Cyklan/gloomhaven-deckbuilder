@@ -3,7 +3,7 @@ import Card from "../../cards/components/Card";
 import { Card as CardModel } from "../../model/Card";
 import DeckBuildingCardContainer from "../BottomCardContainer";
 import Menu from "../icons/img/menu.svg";
-import Close from "../icons/img/close.svg"
+import Close from "../icons/img/close.svg";
 import { Character } from "../../model/Characters";
 import toast from "react-hot-toast";
 import { DeckBuilderSidebar } from "../DeckBuilderSidebar";
@@ -19,13 +19,13 @@ interface DeckBuilderProps {
 
 export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDeckBuilder, save, editDeck }) => {
 
-  const [unusedCards, setUnusedCards] = useState(editDeck != null ? 
-      character.cards.cards.
-        sort((a, b) => a.level - b.level)
-        .filter(x => !editDeck.cards.some(y => x.title === y.title))  
+  const [unusedCards, setUnusedCards] = useState(editDeck != null ?
+    character.cards.cards.
+      sort((a, b) => a.level - b.level)
+      .filter(x => !editDeck.cards.some(y => x.title === y.title))
     : character.cards.cards.sort((a, b) => a.level - b.level));
   const [deck, setDeck] = useState<CardModel[]>(editDeck?.cards || []);
-  const [selectedCard, setSelectedCard] = useState<CardModel | null>(null)
+  const [selectedCard, setSelectedCard] = useState<CardModel | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openModalRef = useRef<HTMLInputElement>(null);
@@ -78,13 +78,13 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
           <div className="text-xl aspect-square w-12 flex items-center justify-center">{deck.length} / {character.handLimit}</div>
         </div>
         <main className="grid grid-cols-2 lg:grid-cols-4 py-24">
-          <DeckBuildingCardContainer 
+          <DeckBuildingCardContainer
             cardOnClick={(card) => {
               setSelectedCard(card);
               openModalRef.current?.click();
             }}
             cards={deck}
-            prefix={character.prefix}  />
+            prefix={character.prefix} />
           {cardViewCards}
         </main>
       </div>
@@ -97,12 +97,18 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
           <div className="relative flex flex-col h-full">
             {selectedCard && (
               <>
-                <h3 className="text-center text-xl">{selectedCard.title}</h3> 
+                <h3 className="text-center text-xl">{selectedCard.title}</h3>
                 <Card card={selectedCard} imagePath={`/cards/${character.prefix}/${selectedCard.imgName}`} />
                 <div className="flex-auto flex flex-col-reverse items-center">
-                  <button 
+                  <button
                     className="btn btn-primary max-w-max uppercase tracking-widest"
-                    disabled={!deck.includes(selectedCard) && deck.length === character.handLimit} 
+                    disabled={
+                      deck.length === character.handLimit
+                      ||
+                      (selectedCard.level > 1
+                        && deck.filter(x => x.level === selectedCard.level).length > 0
+                        && !deck.includes(selectedCard)
+                      )}
                     onClick={() => {
                       if (deck.includes(selectedCard)) {
                         removeFromDeck(selectedCard);
@@ -125,11 +131,11 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
         const newDeck: Deck = {
           title: deckName.length > 0 ? deckName : editDeck!.title,
           cards: deck,
-          character: character 
-        }
+          character: character
+        };
 
         save(newDeck);
       }} exit={closeDeckBuilder} open={sidebarOpen} close={() => setSidebarOpen(false)} />
     </>
-  )
-}
+  );
+};
