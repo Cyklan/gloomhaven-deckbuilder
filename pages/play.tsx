@@ -69,6 +69,9 @@ const Play: NextPage = () => {
       setPopupCards(_popupCards);
       modalRef.current?.click();
     }
+    if (popupCards.length === 0 && turnState === TurnState.ENDING) {
+      setTurnState(TurnState.BEGINNING);
+    } 
   }, [popupCards, currentPopupCard]);
 
   function addRemoveTurnCard(card: CardModel) {
