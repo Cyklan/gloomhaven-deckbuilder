@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
+import Card from "../cards/components/Card";
 import DeckBuildingCardContainer from "../components/BottomCardContainer";
 import { HandContainer } from "../components/play/HandContainer";
 import { Card as CardModel } from "../model/Card";
@@ -190,12 +191,17 @@ const Play: NextPage = () => {
         <>
           <div className="modal">
             <div className="modal-box">
-              <p className="py-4">
-                Your Card {currentPopupCard!.title} {currentPopupCard!.counter > 0 ? "has a counter" : "is"} {
-                  currentPopupCard!.losable ? "losable" : currentPopupCard!.permanent ? "permanent" : ""
-                }. Did you use that action?
-                <br />
-              </p>
+              <div className="py-4">
+                <Card 
+                  card={currentPopupCard} 
+                  imagePath={`/cards/${deck?.character.prefix}/${currentPopupCard.imgName}`} />
+                <p>
+                  Your Card {currentPopupCard!.title} {currentPopupCard!.counter > 0 ? "has a counter" : "is"} {
+                    currentPopupCard!.losable ? "losable" : currentPopupCard!.permanent ? "permanent" : ""
+                  }. Did you use that action?
+                  <br />
+                </p>
+              </div>
               <div className="modal-action">
                 {(currentPopupCard!.counter > 0) &&
                   <button
