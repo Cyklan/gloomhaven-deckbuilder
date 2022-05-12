@@ -191,7 +191,7 @@ const Play: NextPage = () => {
         <>
           <div className="modal">
             <div className="modal-box">
-              <div className="py-4">
+              <div>
                 <Card 
                   card={currentPopupCard} 
                   imagePath={`/cards/${deck?.character.prefix}/${currentPopupCard.imgName}`} />
