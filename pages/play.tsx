@@ -42,7 +42,7 @@ const Play: NextPage = () => {
 
       if (discardableCards.length > 0) {
         setDiscardedCards([...discardedCards, ...discardableCards]);
-        setHandCards(handCards.filter(card => !discardableCards.includes(card)));
+        setHandCards(handCards.filter(card => !discardableCards.includes(card) && !card.losable));
       }
       if (_popupCards.length > 0) {
         setPopupCards([...popupCards, ..._popupCards]);
@@ -69,10 +69,15 @@ const Play: NextPage = () => {
       setPopupCards(_popupCards);
       modalRef.current?.click();
     }
-    if (popupCards.length === 0 && turnState === TurnState.ENDING) {
+    if (popupCards.length === 0 && turnState === TurnState.ENDING && currentPopupCard === null) {
       setTurnState(TurnState.BEGINNING);
-    } 
+    }
   }, [popupCards, currentPopupCard]);
+
+  function closePopupCard() {
+    setCurrentPopupCard(null);
+    modalRef.current?.click();
+  }
 
   function addRemoveTurnCard(card: CardModel) {
     if (turnCards.some(x => x.title === card.title)) {
@@ -188,21 +193,37 @@ const Play: NextPage = () => {
               <p className="py-4">
                 Your Card {currentPopupCard!.title} {currentPopupCard!.counter > 0 ? "has a counter" : "is"} {
                   currentPopupCard!.losable ? "losable" : currentPopupCard!.permanent ? "permanent" : ""
-                }.<br />
+                }. Did you use that action?
+                <br />
               </p>
               <div className="modal-action">
-                {(currentPopupCard!.counter > 0 || currentPopupCard!.losable) &&
-                  <button className="btn btn-primary">
+                {(currentPopupCard!.counter > 0) &&
+                  <button
+                    onClick={() => {
+                      setPermanentCards([...permanentCards, currentPopupCard!]);
+                      setTurnCards(turnCards.filter(x => x.title !== currentPopupCard!.title));
+                      setHandCards(handCards.filter(x => x.title !== currentPopupCard!.title));
+                      closePopupCard();
+                    }}
+                    className="btn btn-primary">
                     Add to active Cards
                   </button>}
                 {currentPopupCard!.losable &&
-                  <button className="btn btn-primary">
+                  <button
+                    onClick={() => {
+                      loseCard(currentPopupCard!);
+                      closePopupCard();
+                    }}
+                    className="btn btn-primary">
                     Lose Card
                   </button>}
                 <button className="btn btn-outline"
                   onClick={() => {
-                    modalRef.current?.click();
-                    setCurrentPopupCard(null);
+                    if (turnState === TurnState.ENDING) {
+                      setDiscardedCards([...discardedCards, currentPopupCard!]);
+                      setHandCards([...handCards.filter(x => x.title !== currentPopupCard!.title)]);
+                    }
+                    closePopupCard();
                   }}
                 >Cancel</button>
               </div>
