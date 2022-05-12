@@ -97,7 +97,7 @@
       "title": "Continual Supply",
       "imgName": "continual-supply.png",
       "counter": 0,
-      "losable": false,
+      "losable": true,
       "level": 3,
       "initiative": 86,
       "permanent": true,
@@ -162,7 +162,7 @@
       "losable": false,
       "level": 8,
       "initiative": 10,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": [
         {
@@ -394,7 +394,7 @@
       "title": "Refreshment",
       "imgName": "refreshment.png",
       "counter": 0,
-      "losable": false,
+      "losable": true,
       "level": 7,
       "initiative": 89,
       "permanent": true,

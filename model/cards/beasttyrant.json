@@ -47,7 +47,7 @@
       "losable": false,
       "level": 6,
       "initiative": 42,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": [
         {

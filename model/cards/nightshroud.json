@@ -89,7 +89,7 @@
       "losable": false,
       "level": 1,
       "initiative": 44,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": []
     },
@@ -100,7 +100,7 @@
       "losable": false,
       "level": 5,
       "initiative": 26,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": [
         {
@@ -337,7 +337,7 @@
       "losable": false,
       "level": 4,
       "initiative": 73,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": []
     },
@@ -608,7 +608,7 @@
       "losable": false,
       "level": 9,
       "initiative": 6,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": [
         {
@@ -638,7 +638,7 @@
       "losable": false,
       "level": 0,
       "initiative": 24,
-      "permanent": true,
+      "permanent": false,
       "recoverable": true,
       "enhancementPositions": []
     }
