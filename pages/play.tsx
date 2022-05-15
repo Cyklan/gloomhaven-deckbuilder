@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
 import Card from "../cards/components/Card";
-import DeckBuildingCardContainer from "../components/BottomCardContainer";
+import DeckBuildingCardContainer, { BottomCardContainerMode } from "../components/BottomCardContainer";
 import { HandContainer } from "../components/play/HandContainer";
 import { Card as CardModel } from "../model/Card";
 import { TurnState } from "../model/TurnState";
@@ -55,7 +55,7 @@ const Play: NextPage = () => {
     if (turnState === TurnState.PLAYING) {
       const playedCards = [...turnCards];
       // if card has a counter, add to countercards
-      const counterCards = playedCards.filter(card => card.counter > 0);
+      const counterCards = playedCards.filter(card => card.counter > 0 || card.permanent);
       if (counterCards.length > 0) {
         const permCards = [...permanentCards, ...counterCards];
         setPopupCards([...popupCards, ...permCards]);
@@ -100,6 +100,11 @@ const Play: NextPage = () => {
     if (turnCards.filter(x => x.title === card.title).length > 0) {
       setTurnCards(turnCards.filter(x => x.title !== card.title));
     }
+  }
+
+  function loseCardFromPermanent(card: CardModel) {
+    setLostCards([...lostCards, card]);
+    setPermanentCards(permanentCards.filter(x => x.title !== card.title));  
   }
 
   function addCardToHandFromDiscarded(card: CardModel) {
@@ -178,7 +183,13 @@ const Play: NextPage = () => {
   return (
     <>
       <div className="w-screen h-screen overflow-hidden flex flex-col items-center">
-        <DeckBuildingCardContainer cardOnClick={() => { }} cards={permanentCards} prefix={deck?.character.prefix || ""} />
+        <DeckBuildingCardContainer
+          cardOnClick={() => { }}
+          cards={permanentCards}
+          prefix={deck?.character.prefix || ""}
+          mode={BottomCardContainerMode.PLAYING}
+          loseCard={loseCardFromPermanent}
+        />
         <div className="tabs py-4">
           {pageTabs}
         </div>
@@ -192,8 +203,8 @@ const Play: NextPage = () => {
           <div className="modal">
             <div className="modal-box">
               <div>
-                <Card 
-                  card={currentPopupCard} 
+                <Card
+                  card={currentPopupCard}
                   imagePath={`/cards/${deck?.character.prefix}/${currentPopupCard.imgName}`} />
                 <p>
                   Your Card {currentPopupCard!.title} {currentPopupCard!.counter > 0 ? "has a counter" : "is"} {
@@ -203,7 +214,7 @@ const Play: NextPage = () => {
                 </p>
               </div>
               <div className="modal-action">
-                {(currentPopupCard!.counter > 0) &&
+                {(currentPopupCard!.counter > 0 || currentPopupCard!.permanent) &&
                   <button
                     onClick={() => {
                       setPermanentCards([...permanentCards, currentPopupCard!]);

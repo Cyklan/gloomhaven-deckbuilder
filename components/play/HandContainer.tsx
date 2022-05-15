@@ -89,12 +89,15 @@ export const HandContainer: FC<HandContainerProps> = ({ cards, prefix, available
     <CardContainer>
       {cardElements}
       {showBottomButton &&
-        <button
-          disabled={buttonDisabled}
-          className={`btn btn-primary uppercase tracking-widest fixed bottom-20 left-1/2 -translate-x-1/2 ${turnState === TurnState.ENDING ? "hidden" : ""}`}
-          onClick={buttonAction}>
-          {buttonContent}
-        </button>}
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 max-w-max">
+          <button
+            disabled={buttonDisabled}
+            className={`btn btn-primary uppercase tracking-widest ${turnState === TurnState.ENDING ? "hidden" : ""}`}
+            onClick={buttonAction}>
+            {buttonContent}
+          </button>
+        </div>
+      }
     </CardContainer>
     {turnState !== TurnState.ENDING && <>
       <input ref={modalToggleRef} type="checkbox" id="hand-modal-toggle" className="modal-toggle" />

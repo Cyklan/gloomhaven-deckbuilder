@@ -1,5 +1,5 @@
 .container {
-  @apply transition-all h-16 border-t-2 lg:h-screen lg:min-h-screen bg-base-200 border-base-content lg:border-t-0 lg:border-r-2 w-screen lg:w-1/4 fixed bottom-0 lg:bottom-auto overflow-hidden lg:overflow-y-auto z-10;
+  @apply transition-all h-16 border-t-2 lg:h-screen lg:min-h-screen bg-base-200 border-base-content lg:border-t-0 lg:border-r-2 w-screen lg:w-1/4 fixed bottom-0 lg:bottom-auto overflow-hidden lg:overflow-y-auto z-20;
 
   &.has-content {
     @apply max-h-16 h-auto;
