@@ -23,27 +23,27 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
   }
 
   const [open, setOpen] = useState(false);
-  const [selectedPlayCard, setSelectedPlayCard] = useState<CardModel | null>(null)
-  const [cardCounters, setCardCounters] = useState<{ [key: string]: number }>({});
+  const [selectedPlayCard, setSelectedPlayCard] = useState<CardModel | null>(null);
+  const [cardCounters, setCardCounters] = useState<{ [key: string]: number; }>({});
 
   useEffect(() => {
     if (cards.length === 0) {
       setOpen(false);
     }
-  }, [cards])
+  }, [cards]);
 
-  useEffect(() => {
-    cards.forEach(card => {
-      if (card.counters.length !== 0
-        && cardCounters[card.title] != null
-        && cardCounters[card.title] >= card.counters.length) {
-        loseCard!(card);
-        const _cardCounters = { ...cardCounters };
-        delete _cardCounters[card.title];
-        setCardCounters(_cardCounters);
-      }
-    })
-  }, [cardCounters, cards, loseCard])
+  // useEffect(() => {
+  //   cards.forEach(card => {
+  //     if (card.counters.length !== 0
+  //       && cardCounters[card.title] != null
+  //       && cardCounters[card.title] >= card.counters.length) {
+  //       loseCard!(card);
+  //       const _cardCounters = { ...cardCounters };
+  //       delete _cardCounters[card.title];
+  //       setCardCounters(_cardCounters);
+  //     }
+  //   })
+  // }, [cardCounters, cards, loseCard])
 
   const cardElements = cards.map(x => <Card
     card={x}
@@ -51,14 +51,14 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
     key={`${x.title}-card`}
     imagePath={`/cards/${prefix}/${x.imgName}`}
     onClick={() => {
-      cardOnClick(x)
+      cardOnClick(x);
     }}
     showCounter={
       open
       && mode === BottomCardContainerMode.PLAYING
       && cardCounters[x.title] != null
       && cardCounters[x.title] > 0}
-    counter={cardCounters[x.title]}
+    counter={Math.min(cardCounters[x.title], x.counters.length)}
   />);
 
   return (

@@ -25,8 +25,8 @@ export default function Card({ card, imagePath, onClick, className, showCounter,
         <Image
           className={`rounded-lg lg:rounded-3xl shrink-0 overflow-hidden ${className || ""}`}
           src={imagePath}
-          width={600}
-          height={800}
+          width={400}
+          height={600}
           alt={card.title}
           onClick={onClick}
           layout={"raw"}
