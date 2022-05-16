@@ -7,6 +7,11 @@ const nextConfig = {
       use: ['@svgr/webpack'],
     })
     return config
+  },
+  experimental: {
+    images: {
+      layoutRaw: true
+    }
   }
 }
 

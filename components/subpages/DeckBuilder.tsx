@@ -85,7 +85,7 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
           <span className="text-xl">{deckName || editDeck?.title}</span>
           <div className={`text-xl aspect-square w-12 flex items-center justify-center ${deck.length === character.handLimit ? "text-red-500" : ""}`}>{deck.length} / {character.handLimit}</div>
         </div>
-        <main className="grid grid-cols-2 lg:grid-cols-4 py-24">
+        <main className="relative grid grid-cols-2 gap-y-2 lg:grid-cols-4 py-24">
           <DeckBuildingCardContainer
             cardOnClick={(card) => {
               setSelectedCard(card);
