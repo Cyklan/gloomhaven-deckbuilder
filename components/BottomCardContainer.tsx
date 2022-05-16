@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Card from "../cards/components/Card";
 import { Card as CardModel } from "../model/Card";
 import styles from "../styles/BottomCardContainer.module.scss";
+import Close from "./icons/img/close.svg";
 
 export enum BottomCardContainerMode {
   DECK_BUILDING,
@@ -21,7 +22,7 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
   if (mode == null) {
     mode = BottomCardContainerMode.DECK_BUILDING;
   }
-
+  const modalToggle = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
   const [selectedPlayCard, setSelectedPlayCard] = useState<CardModel | null>(null);
   const [cardCounters, setCardCounters] = useState<{ [key: string]: number; }>({});
@@ -32,18 +33,11 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
     }
   }, [cards]);
 
-  // useEffect(() => {
-  //   cards.forEach(card => {
-  //     if (card.counters.length !== 0
-  //       && cardCounters[card.title] != null
-  //       && cardCounters[card.title] >= card.counters.length) {
-  //       loseCard!(card);
-  //       const _cardCounters = { ...cardCounters };
-  //       delete _cardCounters[card.title];
-  //       setCardCounters(_cardCounters);
-  //     }
-  //   })
-  // }, [cardCounters, cards, loseCard])
+  useEffect(() => {
+    if (selectedPlayCard != null) {
+      modalToggle.current!.checked = true;
+    }
+  }, [selectedPlayCard]);
 
   const cardElements = cards.map(x => <Card
     card={x}
@@ -52,6 +46,9 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
     imagePath={`/cards/${prefix}/${x.imgName}`}
     onClick={() => {
       cardOnClick(x);
+      if (mode === BottomCardContainerMode.PLAYING) {
+        setSelectedPlayCard(x);
+      }
     }}
     showCounter={
       open
@@ -60,6 +57,26 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
       && cardCounters[x.title] > 0}
     counter={Math.min(cardCounters[x.title], x.counters.length)}
   />);
+
+  function increaseCardCounter(title: string) {
+    const newCounters = { ...cardCounters };
+    newCounters[title] = newCounters[title] == null ? 1 : newCounters[title] + 1;
+    setCardCounters(newCounters);
+  }
+
+  function decreaseCardCounter(title: string) {
+    const newCounters = { ...cardCounters };
+    newCounters[title] = newCounters[title] == null ? 0 : newCounters[title] - 1;
+    setCardCounters(newCounters);
+  }
+
+  function loseSelectedCard() {
+    loseCard!(selectedPlayCard!);
+    const _cardCounters = { ...cardCounters };
+    delete _cardCounters[selectedPlayCard!.title];
+    setCardCounters(_cardCounters);
+    modalToggle.current!.checked = false;
+  }
 
   return (
     <>
@@ -81,6 +98,63 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
           </button>
         </div>
       </div>
+      <input id="bottom-card-container-modal" type="checkbox" className="modal-toggle" ref={modalToggle} />
+      {selectedPlayCard &&
+        <div className="modal z-20">
+          <div className="modal-box relative flex flex-col overflow-hidden">
+            <h3 className="font-bold text-lg pb-4">{selectedPlayCard !== null && selectedPlayCard.title}</h3>
+            <button onClick={() => {
+              modalToggle.current!.checked = false;
+              setSelectedPlayCard(null);
+            }} className="btn btn-square btn-primary fixed top-2 right-2">
+              <Close />
+            </button>
+            <div className="pb-4 flex-auto overflow-y-auto">
+              <Card
+                card={selectedPlayCard}
+                imagePath={`/cards/${prefix}/${selectedPlayCard.imgName}`}
+                showCounter={mode === BottomCardContainerMode.PLAYING
+                  && cardCounters[selectedPlayCard.title] != null
+                  && cardCounters[selectedPlayCard.title] > 0}
+                counter={cardCounters[selectedPlayCard.title]} />
+              {(selectedPlayCard.permanent ||
+                cardCounters[selectedPlayCard.title] === selectedPlayCard.counters.length) &&
+                <div className="w-full flex flex-col items-center mb-4">
+                  <button
+                    onClick={loseSelectedCard} 
+                    className="btn btn-primary uppercase tracking-widest">
+                    Lose
+                  </button>
+                </div>
+              }
+              {selectedPlayCard.counters.length > 0 &&
+                <div className="w-full flex flex-col items-center gap-y-4">
+                  {(cardCounters[selectedPlayCard.title] == null ||
+                    cardCounters[selectedPlayCard.title] < selectedPlayCard.counters.length) &&
+                    <button
+                      onClick={() => {
+                        increaseCardCounter(selectedPlayCard.title);
+                      }}
+                      className="btn btn-primary uppercase tracking-widest">
+                      Increase Counter
+                    </button>
+                  }
+                  {(cardCounters[selectedPlayCard.title] != null &&
+                    cardCounters[selectedPlayCard.title] > 0) &&
+                    <button
+                      onClick={() => {
+                        decreaseCardCounter(selectedPlayCard.title);
+                      }}
+                      className="btn btn-primary uppercase tracking-widest">
+                      Decrease Counter
+                    </button>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
     </>
   );
 }
