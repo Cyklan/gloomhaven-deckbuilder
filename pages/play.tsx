@@ -55,7 +55,7 @@ const Play: NextPage = () => {
     if (turnState === TurnState.PLAYING) {
       const playedCards = [...turnCards];
       // if card has a counter, add to countercards
-      const counterCards = playedCards.filter(card => card.counter > 0 || card.permanent);
+      const counterCards = playedCards.filter(card => card.counters.length > 0 || card.permanent);
       if (counterCards.length > 0) {
         const permCards = [...permanentCards, ...counterCards];
         setPopupCards([...popupCards, ...permCards]);
@@ -207,14 +207,14 @@ const Play: NextPage = () => {
                   card={currentPopupCard}
                   imagePath={`/cards/${deck?.character.prefix}/${currentPopupCard.imgName}`} />
                 <p>
-                  Your Card {currentPopupCard!.title} {currentPopupCard!.counter > 0 ? "has a counter" : "is"} {
+                  Your Card {currentPopupCard!.title} {currentPopupCard!.counters.length > 0 ? "has a counter" : "is"} {
                     currentPopupCard!.losable ? "losable" : currentPopupCard!.permanent ? "permanent" : ""
                   }. Did you use that action?
                   <br />
                 </p>
               </div>
               <div className="modal-action">
-                {(currentPopupCard!.counter > 0 || currentPopupCard!.permanent) &&
+                {(currentPopupCard!.counters.length > 0 || currentPopupCard!.permanent) &&
                   <button
                     onClick={() => {
                       setPermanentCards([...permanentCards, currentPopupCard!]);

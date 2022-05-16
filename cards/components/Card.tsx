@@ -12,6 +12,12 @@ interface CardProps {
 }
 
 export default function Card({ card, imagePath, onClick, className, showCounter, counter }: CardProps) {
+
+  const position = card.counters[counter && counter > 0 ? counter - 1 : -1] || {
+    x: 0,
+    y: 0,
+  };
+
   return (
     <div
       className="relative">
@@ -26,14 +32,13 @@ export default function Card({ card, imagePath, onClick, className, showCounter,
           layout={"raw"}
         />
         {showCounter && counter && counter > 0 &&
-          // TODO: calculate relative position based on pixel values
           // TODO: replace green circle with actual token provided by Cephalofair
           <div
             style={{
-              top: "0%", // <-- FIX HERE
-              left: "0%",
-            }} 
-            className="w-[10%] aspect-square bg-green-400 absolute rounded-full"></div>}
+              left: position.x / 400 * 100 + "%",
+              top: position.y / 600 * 100 + "%",
+            }}
+            className="w-[10%] aspect-square bg-green-400 absolute rounded-full -translate-x-1/2 -translate-y-1/2"></div>}
       </div>
     </div>
   );

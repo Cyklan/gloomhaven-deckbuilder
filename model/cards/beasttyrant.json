@@ -4,7 +4,7 @@
     {
       "title": "Ancient Ward",
       "imgName": "ancient-ward.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 4,
       "initiative": 19,
@@ -43,7 +43,28 @@
     {
       "title": "Blood Hunger",
       "imgName": "blood-hunger.png",
-      "counter": 5,
+      "counters": [
+        {
+          "x": 128,
+          "y": 186
+        },
+        {
+          "x": 201,
+          "y": 185
+        },
+        {
+          "x": 274,
+          "y": 186
+        },
+        {
+          "x": 163,
+          "y": 245
+        },
+        {
+          "x": 236,
+          "y": 245
+        }
+      ],
       "losable": false,
       "level": 6,
       "initiative": 42,
@@ -73,7 +94,7 @@
     {
       "title": "Borrowed Essence",
       "imgName": "borrowed-essence.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 0,
       "initiative": 56,
@@ -103,7 +124,7 @@
     {
       "title": "Concentrated Rage",
       "imgName": "concentrated-rage.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 51,
@@ -133,7 +154,7 @@
     {
       "title": "Disappearing Wounds",
       "imgName": "disappearing-wounds.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 23,
@@ -172,7 +193,7 @@
     {
       "title": "Disorienting Roar",
       "imgName": "disorienting-roar.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 1,
       "initiative": 17,
@@ -183,7 +204,7 @@
     {
       "title": "Earthen Spikes",
       "imgName": "earthen-spikes.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 2,
       "initiative": 11,
@@ -204,7 +225,7 @@
     {
       "title": "Energizing Strike",
       "imgName": "energizing-strike.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 2,
       "initiative": 29,
@@ -234,7 +255,7 @@
     {
       "title": "Focused Aggression",
       "imgName": "focused-aggression.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 0,
       "initiative": 31,
@@ -273,7 +294,7 @@
     {
       "title": "Forceful Swipe",
       "imgName": "forceful-swipe.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 35,
@@ -321,7 +342,7 @@
     {
       "title": "Howling Bolts",
       "imgName": "howling-bolts.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 47,
@@ -351,7 +372,7 @@
     {
       "title": "Jaws Of Death",
       "imgName": "jaws-of-death.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 9,
       "initiative": 48,
@@ -381,7 +402,7 @@
     {
       "title": "Lash Out",
       "imgName": "lash-out.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 8,
       "initiative": 18,
@@ -420,7 +441,7 @@
     {
       "title": "Maul",
       "imgName": "maul.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 14,
@@ -459,7 +480,7 @@
     {
       "title": "Natural Remedy",
       "imgName": "natural-remedy.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 8,
       "initiative": 25,
@@ -489,7 +510,7 @@
     {
       "title": "Patch Fur",
       "imgName": "patch-fur.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 20,
@@ -519,7 +540,7 @@
     {
       "title": "Primal Blessing",
       "imgName": "primal-blessing.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 6,
       "initiative": 28,
@@ -558,7 +579,7 @@
     {
       "title": "Punch Through",
       "imgName": "punch-through.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 4,
       "initiative": 44,
@@ -597,7 +618,7 @@
     {
       "title": "Rampage",
       "imgName": "rampage.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 5,
       "initiative": 34,
@@ -627,7 +648,7 @@
     {
       "title": "Relentless Ally",
       "imgName": "relentless-ally.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 81,
@@ -666,7 +687,7 @@
     {
       "title": "Soaring Ally",
       "imgName": "soaring-ally.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 0,
       "initiative": 77,
@@ -696,7 +717,7 @@
     {
       "title": "Spirit Swap",
       "imgName": "spirit-swap.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 22,
@@ -726,7 +747,7 @@
     {
       "title": "Stone Sigil",
       "imgName": "stone-sigil.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 5,
       "initiative": 95,
@@ -756,7 +777,7 @@
     {
       "title": "Storm Sigil",
       "imgName": "storm-sigil.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 7,
       "initiative": 93,
@@ -786,7 +807,7 @@
     {
       "title": "Tribal Sigil",
       "imgName": "tribal-sigil.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 9,
       "initiative": 91,
@@ -797,7 +818,7 @@
     {
       "title": "Tyrannical Force",
       "imgName": "tyrannical-force.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 7,
       "initiative": 37,
@@ -818,7 +839,7 @@
     {
       "title": "Unstoppable Beast",
       "imgName": "unstoppable-beast.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 3,
       "initiative": 32,
@@ -857,7 +878,7 @@
     {
       "title": "Venomous Ally",
       "imgName": "venomous-ally.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 79,
@@ -905,7 +926,7 @@
     {
       "title": "Vicious Ally",
       "imgName": "vicious-ally.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 3,
       "initiative": 86,

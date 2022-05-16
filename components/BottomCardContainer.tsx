@@ -34,9 +34,9 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
 
   useEffect(() => {
     cards.forEach(card => {
-      if (card.counter !== 0
+      if (card.counters.length !== 0
         && cardCounters[card.title] != null
-        && cardCounters[card.title] >= card.counter) {
+        && cardCounters[card.title] >= card.counters.length) {
         loseCard!(card);
         const _cardCounters = { ...cardCounters };
         delete _cardCounters[card.title];

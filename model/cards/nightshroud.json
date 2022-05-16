@@ -4,7 +4,7 @@
     {
       "title": "Angel Of Death",
       "imgName": "angel-of-death.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 9,
       "initiative": 38,
@@ -34,7 +34,7 @@
     {
       "title": "Armor Of The Night",
       "imgName": "armor-of-the-night.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 3,
       "initiative": 23,
@@ -64,7 +64,7 @@
     {
       "title": "Black Arrow",
       "imgName": "black-arrow.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 5,
       "initiative": 11,
@@ -85,7 +85,24 @@
     {
       "title": "Black Knives",
       "imgName": "black-knives.png",
-      "counter": 4,
+      "counters": [
+        {
+          "x": 180,
+          "y": 192
+        },
+        {
+          "x": 256,
+          "y": 192
+        },
+        {
+          "x": 144,
+          "y": 252
+        },
+        {
+          "x": 218,
+          "y": 252
+        }
+      ],
       "losable": false,
       "level": 1,
       "initiative": 44,
@@ -96,7 +113,24 @@
     {
       "title": "Claws Of The Night",
       "imgName": "claws-of-the-night.png",
-      "counter": 4,
+      "counters": [
+        {
+          "x": 179,
+          "y": 441
+        },
+        {
+          "x": 256,
+          "y": 441
+        },
+        {
+          "x": 140,
+          "y": 497
+        },
+        {
+          "x": 217,
+          "y": 496
+        }
+      ],
       "losable": false,
       "level": 5,
       "initiative": 26,
@@ -117,7 +151,7 @@
     {
       "title": "Cloak Of Shade",
       "imgName": "cloak-of-shade.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 13,
@@ -147,7 +181,7 @@
     {
       "title": "Concealed Dominance",
       "imgName": "concealed-dominance.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 0,
       "initiative": 35,
@@ -158,7 +192,7 @@
     {
       "title": "Dancing Shadows",
       "imgName": "dancing-shadows.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 9,
@@ -179,7 +213,7 @@
     {
       "title": "Dark Cloud",
       "imgName": "dark-cloud.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 0,
       "initiative": 74,
@@ -190,7 +224,7 @@
     {
       "title": "Doomed Breeze",
       "imgName": "doomed-breeze.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 15,
@@ -220,7 +254,7 @@
     {
       "title": "Empowering Void",
       "imgName": "empowering-void.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 21,
@@ -231,7 +265,7 @@
     {
       "title": "Enervating Wound",
       "imgName": "enervating-wound.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 1,
       "initiative": 77,
@@ -261,7 +295,7 @@
     {
       "title": "Eyes Of The Night",
       "imgName": "eyes-of-the-night.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 7,
       "initiative": 35,
@@ -272,7 +306,7 @@
     {
       "title": "Gloom Darts",
       "imgName": "gloom-darts.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 8,
       "initiative": 78,
@@ -311,7 +345,7 @@
     {
       "title": "Grim Sustenance",
       "imgName": "grim-sustenance.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 4,
       "initiative": 29,
@@ -322,7 +356,7 @@
     {
       "title": "Lurking Ruin",
       "imgName": "lurking-ruin.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 8,
       "initiative": 18,
@@ -333,7 +367,20 @@
     {
       "title": "Nightfall",
       "imgName": "nightfall.png",
-      "counter": 3,
+      "counters": [
+        {
+          "x": 162,
+          "y": 186
+        },
+        {
+          "x": 236,
+          "y": 186
+        },
+        {
+          "x": 200,
+          "y": 245
+        }
+      ],
       "losable": false,
       "level": 4,
       "initiative": 73,
@@ -344,7 +391,7 @@
     {
       "title": "Prepare For The Kill",
       "imgName": "prepare-for-the-kill.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 2,
       "initiative": 7,
@@ -392,7 +439,7 @@
     {
       "title": "Quiet Frenzy",
       "imgName": "quiet-frenzy.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 7,
       "initiative": 19,
@@ -403,7 +450,7 @@
     {
       "title": "Silent Force",
       "imgName": "silent-force.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 1,
       "initiative": 9,
@@ -424,7 +471,7 @@
     {
       "title": "Smoke Step",
       "imgName": "smoke-step.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 1,
       "initiative": 28,
@@ -454,7 +501,7 @@
     {
       "title": "Soulfire",
       "imgName": "soulfire.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 2,
       "initiative": 85,
@@ -493,7 +540,7 @@
     {
       "title": "Spirit Of The Night",
       "imgName": "spirit-of-the-night.png",
-      "counter": 0,
+      "counters": [],
       "losable": true,
       "level": 1,
       "initiative": 84,
@@ -523,7 +570,7 @@
     {
       "title": "Swallowed By Fear",
       "imgName": "swallowed-by-fear.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 6,
       "initiative": 90,
@@ -544,7 +591,7 @@
     {
       "title": "Terror Blade",
       "imgName": "terror-blade.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 3,
       "initiative": 17,
@@ -565,7 +612,7 @@
     {
       "title": "Unseen Dread",
       "imgName": "unseen-dread.png",
-      "counter": 0,
+      "counters": [],
       "losable": false,
       "level": 6,
       "initiative": 5,
@@ -604,7 +651,28 @@
     {
       "title": "Voice Of The Night",
       "imgName": "voice-of-the-night.png",
-      "counter": 5,
+      "counters": [
+        {
+          "x": 137,
+          "y": 185
+        },
+        {
+          "x": 207,
+          "y": 185
+        },
+        {
+          "x": 284,
+          "y": 185
+        },
+        {
+          "x": 172,
+          "y": 245
+        },
+        {
+          "x": 246,
+          "y": 245
+        }
+      ],
       "losable": false,
       "level": 9,
       "initiative": 6,
@@ -634,7 +702,24 @@
     {
       "title": "Wings Of The Night",
       "imgName": "wings-of-the-night.png",
-      "counter": 4,
+      "counters": [
+        {
+          "x": 179,
+          "y": 437
+        },
+        {
+          "x": 256,
+          "y": 434
+        },
+        {
+          "x": 140,
+          "y": 489
+        },
+        {
+          "x": 217,
+          "y": 490
+        }
+      ],
       "losable": false,
       "level": 0,
       "initiative": 24,
