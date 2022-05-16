@@ -43,7 +43,7 @@ const Play: NextPage = () => {
 
       if (discardableCards.length > 0) {
         setDiscardedCards([...discardedCards, ...discardableCards]);
-        setHandCards(handCards.filter(card => !discardableCards.includes(card) && !card.losable));
+        setHandCards(handCards.filter(card => !discardableCards.includes(card)));
       }
       if (_popupCards.length > 0) {
         setPopupCards([...popupCards, ..._popupCards]);
