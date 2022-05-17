@@ -8,13 +8,15 @@ import { Character } from "../../model/Characters";
 import toast from "react-hot-toast";
 import { DeckBuilderSidebar } from "../DeckBuilderSidebar";
 import { Deck } from "../../model/Deck";
+import { DeckSave } from "../../model/DeckSave";
+import { convertSavedDeck } from "../../src/convertSavedDeck";
 
 interface DeckBuilderProps {
   character: Character;
   deckName: string;
   closeDeckBuilder: () => void;
-  save: (deck: Deck) => void;
-  editDeck?: Deck;
+  save: (deck: DeckSave) => void;
+  editDeck?: DeckSave;
 }
 
 export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDeckBuilder, save, editDeck }) => {
@@ -22,9 +24,9 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
   const [unusedCards, setUnusedCards] = useState(editDeck != null ?
     character.cards.cards.
       sort((a, b) => a.level - b.level)
-      .filter(x => !editDeck.cards.some(y => x.title === y.title))
+      .filter(x => !editDeck.cards.some(y => x.title === y))
     : character.cards.cards.sort((a, b) => a.level - b.level));
-  const [deck, setDeck] = useState<CardModel[]>(editDeck?.cards || []);
+  const [deck, setDeck] = useState<CardModel[]>((editDeck && convertSavedDeck(editDeck).cards) || []);
   const [selectedCard, setSelectedCard] = useState<CardModel | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -82,7 +84,7 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
           <button className="btn btn-square btn-primary" onClick={() => setSidebarOpen(true)}>
             <Menu />
           </button>
-          <span className="text-xl">{deckName || editDeck?.title}</span>
+          <span className="text-xl">{deckName || editDeck?.deckTitle}</span>
           <div className={`text-xl aspect-square w-12 flex items-center justify-center ${deck.length === character.handLimit ? "text-red-500" : ""}`}>{deck.length} / {character.handLimit}</div>
         </div>
         <main className="relative grid grid-cols-2 gap-y-2 lg:grid-cols-4 py-24">
@@ -136,13 +138,18 @@ export const DeckBuilder: FC<DeckBuilderProps> = ({ character, deckName, closeDe
       </div>
       <DeckBuilderSidebar save={() => {
         // save deck
-        const newDeck: Deck = {
-          title: deckName.length > 0 ? deckName : editDeck!.title,
-          cards: deck,
-          character: character
+        // const newDeck: Deck = {
+        //   title: deckName.length > 0 ? deckName : editDeck!.title,
+        //   cards: deck,
+        //   character: character
+        // };
+        const saveDeck: DeckSave = {
+          deckTitle: deckName.length > 0 ? deckName : editDeck!.deckTitle,
+          cards: deck.map(x => x.imgName),
+          character: character.name
         };
 
-        save(newDeck);
+        save(saveDeck);
       }} exit={closeDeckBuilder} open={sidebarOpen} close={() => setSidebarOpen(false)} />
     </>
   );

@@ -5,7 +5,9 @@ import Card from "../cards/components/Card";
 import DeckBuildingCardContainer, { BottomCardContainerMode } from "../components/BottomCardContainer";
 import { HandContainer } from "../components/play/HandContainer";
 import { Card as CardModel } from "../model/Card";
+import { Deck } from "../model/Deck";
 import { TurnState } from "../model/TurnState";
+import { convertSavedDeck } from "../src/convertSavedDeck";
 import { DeckContext } from "./_app";
 
 const Play: NextPage = () => {
@@ -14,10 +16,11 @@ const Play: NextPage = () => {
   const router = useRouter();
   const { deck } = useContext(DeckContext);
 
+  const [loadedDeck, setLoadedDeck] = useState<Deck | null>(null);
   const [activePage, setActivePage] = useState<string>("Hand");
   const [turnCards, setTurnCards] = useState<CardModel[]>([]);
   const [permanentCards, setPermanentCards] = useState<CardModel[]>([]);
-  const [handCards, setHandCards] = useState<CardModel[]>(deck?.cards || []);
+  const [handCards, setHandCards] = useState<CardModel[]>(loadedDeck?.cards || []);
   const [discardedCards, setDiscardedCards] = useState<CardModel[]>([]);
   const [lostCards, setLostCards] = useState<CardModel[]>([]);
   const [turnState, setTurnState] = useState<TurnState>(TurnState.BEGINNING);
@@ -29,6 +32,9 @@ const Play: NextPage = () => {
     if (!deck) {
       router.push("/");
     }
+    const _deck = convertSavedDeck(deck!);
+    setLoadedDeck(_deck);
+    setHandCards(_deck.cards);
   }, []);
 
   useEffect(() => {
@@ -124,7 +130,7 @@ const Play: NextPage = () => {
     case "Discarded":
       activeContainer = <HandContainer
         setTurnState={(turnState) => setTurnState(turnState)}
-        prefix={deck?.character.prefix || ""}
+        prefix={loadedDeck?.character.prefix || ""}
         cards={discardedCards}
         availableCardActions={[
           {
@@ -144,7 +150,7 @@ const Play: NextPage = () => {
       activeContainer = (
         <HandContainer
           setTurnState={(turnState) => setTurnState(turnState)}
-          prefix={deck?.character.prefix || ""}
+          prefix={loadedDeck?.character.prefix || ""}
           cards={turnState === TurnState.PLAYING ? turnCards : handCards}
           availableCardActions={[
             { title: "Lose", action: loseCard },
@@ -160,7 +166,7 @@ const Play: NextPage = () => {
         <HandContainer
           setTurnState={(turnState) => setTurnState(turnState)}
           turnState={turnState}
-          prefix={deck?.character.prefix || ""}
+          prefix={loadedDeck?.character.prefix || ""}
           cards={lostCards}
           availableCardActions={[
             { title: "Add to Hand", action: addCardToHandFromLost },
@@ -188,10 +194,10 @@ const Play: NextPage = () => {
         <DeckBuildingCardContainer
           cardOnClick={() => { }}
           cards={permanentCards}
-          prefix={deck?.character.prefix || ""}
+          prefix={loadedDeck?.character.prefix || ""}
           mode={BottomCardContainerMode.PLAYING}
           loseCard={loseCardFromPermanent}
-          currentCharacter={deck?.character}
+          currentCharacter={loadedDeck?.character}
         />
         <div className="tabs py-4">
           {pageTabs}
@@ -208,7 +214,7 @@ const Play: NextPage = () => {
               <div>
                 <Card
                   card={currentPopupCard}
-                  imagePath={`/cards/${deck?.character.prefix}/${currentPopupCard.imgName}`} />
+                  imagePath={`/cards/${loadedDeck?.character.prefix}/${currentPopupCard.imgName}`} />
                 <p>
                   Your Card {currentPopupCard!.title} {currentPopupCard!.counters.length > 0 ? "has a counter" : "is"} {
                     currentPopupCard!.losable ? "losable" : currentPopupCard!.permanent ? "permanent" : ""

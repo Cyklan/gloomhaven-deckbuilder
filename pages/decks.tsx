@@ -10,16 +10,17 @@ import LeftArrow from "../components/icons/img/arrow-left.svg";
 import { CharacterSelect } from "../components/CharacterSelect";
 import { useRef, useState } from "react";
 import { DeckBuilder } from "../components/subpages/DeckBuilder";
-import { Character, CharacterList } from "../model/Characters";
+import { Character, CharacterList, getCharacter } from "../model/Characters";
 import { useRouter } from "next/router";
+import { DeckSave } from "../model/DeckSave";
 
 const Decks: NextPage = () => {
 
-  const [decks, setDecks] = useLocalStorage<Deck[]>(LocalStorageKeys.decks, []);
+  const [decks, setDecks] = useLocalStorage<DeckSave[]>(LocalStorageKeys.decks, []);
   const [selectedCharacter, setSelectedCharacter] = useState<Character>(CharacterList[0]);
   const [newDeckName, setNewDeckName] = useState("");
   const [createDeckView, setCreateDeckView] = useState(false);
-  const [selectedDeck, setSelectedDeck] = useState<Deck>();
+  const [selectedDeck, setSelectedDeck] = useState<DeckSave>();
   const router = useRouter();
   const modalToggle = useRef<HTMLInputElement>(null);
 
@@ -37,7 +38,7 @@ const Decks: NextPage = () => {
       character={selectedCharacter}
       deckName={newDeckName}
       save={(deck) => {
-        const existingDeck = decks?.find(d => d.title === deck.title);
+        const existingDeck = decks?.find(d => d.deckTitle === deck.deckTitle);
         if (existingDeck) {
           const index = decks!.indexOf(existingDeck);
           const deckClone = [...decks!];
@@ -54,10 +55,10 @@ const Decks: NextPage = () => {
   const deckCards = decks?.map(deck => (
     <DeckCard
       deck={deck}
-      key={deck.title + "deck"}
+      key={deck.deckTitle + "deck"}
       onClick={() => {
         setSelectedDeck(deck);
-        setSelectedCharacter(deck.character);
+        setSelectedCharacter(getCharacter(deck.character));
         modalToggle.current?.click();
       }} />
   ));
@@ -93,7 +94,7 @@ const Decks: NextPage = () => {
               className="btn btn-square absolute right-2 top-2" >
               <Close />
             </button>
-            <h3 className="text-xl">{selectedDeck.title}</h3>
+            <h3 className="text-xl">{selectedDeck.deckTitle}</h3>
             <div className="py-4 w-full flex flex-col items-center gap-4">
               <button className="btn btn-primary w-2/3 uppercase tracking-widest" onClick={() => {
                 setCreateDeckView(true)

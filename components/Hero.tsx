@@ -1,8 +1,5 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
-import { Card } from "../model/Card";
-import { LocalStorageKeys } from "../model/LocalStorageKeys";
 import { DeckPicker } from "./DeckPicker";
 import { HelpModal } from "./HelpModal";
 import Help from "./icons/img/help.svg";

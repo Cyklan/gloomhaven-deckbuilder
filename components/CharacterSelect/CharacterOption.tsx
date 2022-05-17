@@ -11,7 +11,7 @@ export const CharacterOption: FC<OptionProps<Character>> = (props) => {
   return (
     <Option {...props}>
       <div className="flex flex-row items-center">
-        <CharacterIcon className="fill-white w-8 pr-2" character={props.data} />
+        <CharacterIcon className="fill-white w-8 pr-2" character={props.data.name} />
         <span>{label}</span>
       </div>
     </Option>

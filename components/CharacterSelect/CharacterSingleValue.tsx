@@ -8,7 +8,7 @@ export const CharacterSingleValue: FC<SingleValueProps<Character>> = (props) => 
 
   return <SingleValue {...props}>
     <div className="flex flex-row items-center py-2 px-1">
-      <CharacterIcon className="fill-white w-8 pr-2" character={props.data} />
+      <CharacterIcon className="fill-white w-8 pr-2" character={props.data.name} />
       <span className="text-base">{props.data.name}</span>
     </div>
   </SingleValue>

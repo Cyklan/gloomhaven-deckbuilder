@@ -24,9 +24,9 @@ import Tinkerer from "./characters/tinkerer.svg";
 
 
 
-export const CharacterIcon: FC<{ character: Character, className?: string }> = ({ character, className }) => {
+export const CharacterIcon: FC<{ character: Characters, className?: string }> = ({ character, className }) => {
 
-  switch (character.name) {
+  switch (character) {
     case Characters.BeastTyrant:
       return <BeastTyrant className={`aspect-square ${className}`} />;
     case Characters.Berserker:

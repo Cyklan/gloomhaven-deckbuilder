@@ -1,5 +1,5 @@
 import { CSSProperties, FC } from "react";
-import { Character } from "../model/Characters";
+import { Character, getCharacter } from "../model/Characters";
 import { CharacterIcon } from "./icons/CharacterIcon";
 
 interface PlayerTokenProps {
@@ -13,7 +13,7 @@ export const PlayerToken: FC<PlayerTokenProps> = ({ character, className, style 
     <div
       style={style} 
       className={`rounded-full bg-base-100 ${className}`} >
-      <CharacterIcon character={character} className="fill-white scale-[65%]" />
+      <CharacterIcon character={character.name} className="fill-white scale-[65%]" />
     </div>
   );
 };

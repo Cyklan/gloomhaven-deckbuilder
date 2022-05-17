@@ -80,3 +80,7 @@ export const CharacterList = [
   Nightshroud,
   Quartermaster
 ]
+
+export function getCharacter(character: Characters): Character {
+  return CharacterList.find(c => c.name === character)!;
+}

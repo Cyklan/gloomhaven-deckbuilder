@@ -4,20 +4,21 @@ import { Toaster } from 'react-hot-toast';
 import Head from 'next/head';
 import { createContext, useState } from 'react';
 import { Deck } from '../model/Deck';
-import { CharacterList } from '../model/Characters';
+import { CharacterList, Characters } from '../model/Characters';
+import { DeckSave } from '../model/DeckSave';
 
-export const DeckContext = createContext<{ deck: Deck | null, setDeck: (deck: Deck) => void; }>({
+export const DeckContext = createContext<{ deck: DeckSave | null, setDeck: (deck: DeckSave) => void; }>({
   deck: {
     cards: [],
-    character: CharacterList[0],
-    title:  ""
+    character: Characters.BeastTyrant,
+    deckTitle:  ""
   },
   setDeck: () => { }
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const [deck, setDeck] = useState<Deck | null>(null);
+  const [deck, setDeck] = useState<DeckSave | null>(null);
 
   return <>
     <Head>
