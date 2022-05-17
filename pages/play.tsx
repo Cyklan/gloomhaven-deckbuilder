@@ -191,6 +191,7 @@ const Play: NextPage = () => {
           prefix={deck?.character.prefix || ""}
           mode={BottomCardContainerMode.PLAYING}
           loseCard={loseCardFromPermanent}
+          currentCharacter={deck?.character}
         />
         <div className="tabs py-4">
           {pageTabs}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Card from "../cards/components/Card";
 import { Card as CardModel } from "../model/Card";
+import { Character } from "../model/Characters";
 import styles from "../styles/BottomCardContainer.module.scss";
 import Close from "./icons/img/close.svg";
 
@@ -15,9 +16,10 @@ interface BottomCardContainerProps {
   cardOnClick: (card: CardModel) => void;
   mode?: BottomCardContainerMode;
   loseCard?: (card: CardModel) => void;
+  currentCharacter?: Character
 }
 
-export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, mode, loseCard }: BottomCardContainerProps) {
+export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, mode, loseCard, currentCharacter }: BottomCardContainerProps) {
 
   if (mode == null) {
     mode = BottomCardContainerMode.DECK_BUILDING;
@@ -55,6 +57,7 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
       && cardCounters[x.title] != null
       && cardCounters[x.title] > 0}
     counter={Math.min(cardCounters[x.title], x.counters.length)}
+    character={currentCharacter}
   />);
 
   function increaseCardCounter(title: string) {
@@ -111,6 +114,7 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
             <div className="pb-4 flex-auto overflow-y-auto">
               <Card
                 card={selectedPlayCard}
+                character={currentCharacter}
                 imagePath={`/cards/${prefix}/${selectedPlayCard.imgName}`}
                 showCounter={mode === BottomCardContainerMode.PLAYING
                   && cardCounters[selectedPlayCard.title] != null

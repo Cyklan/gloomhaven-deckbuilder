@@ -24,7 +24,7 @@ import Tinkerer from "./characters/tinkerer.svg";
 
 
 
-export const CharacterIcon: FC<{ character: Character, className: string }> = ({ character, className }) => {
+export const CharacterIcon: FC<{ character: Character, className?: string }> = ({ character, className }) => {
 
   switch (character.name) {
     case Characters.BeastTyrant:
