@@ -51,8 +51,7 @@ export default function DeckBuildingCardContainer({ cards, prefix, cardOnClick, 
       }
     }}
     showCounter={
-      open
-      && mode === BottomCardContainerMode.PLAYING
+      mode === BottomCardContainerMode.PLAYING
       && cardCounters[x.title] != null
       && cardCounters[x.title] > 0}
     counter={Math.min(cardCounters[x.title], x.counters.length)}
