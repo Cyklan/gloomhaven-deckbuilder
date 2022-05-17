@@ -49,13 +49,13 @@ export const BeastTyrant: Character = {
 //   handLimit: 10
 // }
 
-// export const Brute: Character = {
-//   id: 3,
-//   name: Characters.Brute,
-//   prefix: "br",
-//   cards: bruteCards as CardList,
-//   handLimit: 10
-// }
+export const Brute: Character = {
+  id: 3,
+  name: Characters.Brute,
+  prefix: "br",
+  cards: bruteCards as CardList,
+  handLimit: 10
+}
 
 export const Nightshroud: Character = {
   id: 4,
@@ -76,7 +76,7 @@ export const Quartermaster: Character = {
 export const CharacterList = [
   BeastTyrant,
   // Berserker,
-  // Brute,
+  Brute,
   Nightshroud,
   Quartermaster
 ]
