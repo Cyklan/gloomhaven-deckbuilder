@@ -47,6 +47,8 @@ const Play: NextPage = () => {
       }
       if (_popupCards.length > 0) {
         setPopupCards([...popupCards, ..._popupCards]);
+      } else {
+        setTurnState(TurnState.BEGINNING)
       }
 
       setTurnCards([]);
