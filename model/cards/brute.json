@@ -48,6 +48,15 @@
           "canTargetEnemies": true,
           "canTargetAllies": false,
           "isMovement": false
+        },
+        {
+          "x": 261,
+          "y": 422,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
         }
       ]
     },
@@ -168,6 +177,24 @@
           "canTargetEnemies": false,
           "canTargetAllies": false,
           "isMovement": false
+        },
+        {
+          "x": 257,
+          "y": 399,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 283,
+          "y": 399,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
         }
       ]
     },
@@ -210,7 +237,17 @@
       "initiative": 40,
       "permanent": false,
       "recoverable": true,
-      "enhancementPositions": []
+      "enhancementPositions": [
+        {
+          "x": 263,
+          "y": 436,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
     },
     {
       "title": "Frenzied Onslaught",
@@ -251,7 +288,26 @@
       "initiative": 87,
       "permanent": false,
       "recoverable": true,
-      "enhancementPositions": []
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 435,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 292,
+          "y": 435,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
     },
     {
       "title": "Hook And Chain",
@@ -383,6 +439,15 @@
           "canTargetEnemies": true,
           "canTargetAllies": false,
           "isMovement": false
+        },
+        {
+          "x": 254,
+          "y": 427,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
         }
       ]
     },
@@ -494,7 +559,17 @@
       "initiative": 57,
       "permanent": false,
       "recoverable": true,
-      "enhancementPositions": []
+      "enhancementPositions": [
+        {
+          "x": 260,
+          "y": 390,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
     },
     {
       "title": "Selfish Retribution",
@@ -514,6 +589,24 @@
           "canTargetEnemies": false,
           "canTargetAllies": false,
           "isMovement": true
+        },
+        {
+          "x": 261,
+          "y": 374,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 276,
+          "y": 419,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
         }
       ]
     },
@@ -542,6 +635,24 @@
           "abilityLine": 0,
           "isNumeric": true,
           "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 261,
+          "y": 400,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 289,
+          "y": 399,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
           "canTargetAllies": false,
           "isMovement": false
         }
