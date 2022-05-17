@@ -28,40 +28,40 @@ export const CharacterIcon: FC<{ character: Character, className: string }> = ({
 
   switch (character.name) {
     case Characters.BeastTyrant:
-      return <BeastTyrant className={className} />;
+      return <BeastTyrant className={`aspect-square ${className}`} />;
     case Characters.Berserker:
-      return <Berserker className={className} />
+      return <Berserker className={`aspect-square ${className}`} />
     case Characters.Brute:
-      return <Brute className={className} />
+      return <Brute className={`aspect-square ${className}`} />
     case Characters.Cragheart:
-      return <Cragheart className={className} />
+      return <Cragheart className={`aspect-square ${className}`} />
     case Characters.Doomstalker:
-      return <Doomstalker className={className} />
+      return <Doomstalker className={`aspect-square ${className}`} />
     case Characters.Elementalist:
-      return <Elementalist className={className} />
+      return <Elementalist className={`aspect-square ${className}`} />
     case Characters.Mindthief:
-      return <Mindthief className={className} />
+      return <Mindthief className={`aspect-square ${className}`} />
     case Characters.Nightshroud:
-      return <Nightshroud className={className} />
+      return <Nightshroud className={`aspect-square ${className}`} />
     case Characters.Plagueherald:
-      return <Plagueherald className={className} />
+      return <Plagueherald className={`aspect-square ${className}`} />
     case Characters.Quartermaster:
-      return <Quartermaster className={className} />
+      return <Quartermaster className={`aspect-square ${className}`} />
     case Characters.Sawbones:
-      return <Sawbones className={className} />
+      return <Sawbones className={`aspect-square ${className}`} />
     case Characters.Scoundrel:
-      return <Scoundrel className={className} />
+      return <Scoundrel className={`aspect-square ${className}`} />
     case Characters.Soothsinger:
-      return <Soothsinger className={className} />
+      return <Soothsinger className={`aspect-square ${className}`} />
     case Characters.Spellweaver:
-      return <Spellweaver className={className} />
+      return <Spellweaver className={`aspect-square ${className}`} />
     case Characters.Summoner:
-      return <Summoner className={className} />
+      return <Summoner className={`aspect-square ${className}`} />
     case Characters.Sunkeeper:
-      return <Sunkeeper className={className} />
+      return <Sunkeeper className={`aspect-square ${className}`} />
     case Characters.Tinkerer:
-      return <Tinkerer className={className} />
+      return <Tinkerer className={`aspect-square ${className}`} />
     default:
-      return <Tinkerer className={className} />
+      return <Tinkerer className={`aspect-square ${className}`} />
   }
 }
