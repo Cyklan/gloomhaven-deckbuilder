@@ -6,5 +6,6 @@ export interface Card {
   level: number;
   permanent: boolean;
   recoverable: boolean;
-  counters: {x: number, y: number}[];
+  initiative: number;
+  counters: { x: number; y: number }[];
 }
