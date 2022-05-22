@@ -1,0 +1,1062 @@
+{
+  "path": "ch",
+  "cards": [
+    {
+      "title": "Avalanche",
+      "imgName": "avalanche.png",
+      "counters": [],
+      "losable": true,
+      "level": 1,
+      "initiative": 75,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 262,
+          "y": 161,
+          "abilityLine": 1,
+          "isNumeric": false,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 212,
+          "y": 149,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Backup Ammunition",
+      "imgName": "backup-ammunition.png",
+      "counters": [
+        {
+          "x": 174,
+          "y": 189
+        },
+        {
+          "x": 248,
+          "y": 189
+        },
+        {
+          "x": 139,
+          "y": 247
+        },
+        {
+          "x": 211,
+          "y": 249
+        }
+      ],
+      "losable": false,
+      "level": 1,
+      "initiative": 77,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 262,
+          "y": 434,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Blind Destruction",
+      "imgName": "blind-destruction.png",
+      "counters": [],
+      "losable": false,
+      "level": 9,
+      "initiative": 74,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 250,
+          "y": 169,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 374,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Blunt Force",
+      "imgName": "blunt-force.png",
+      "counters": [],
+      "losable": true,
+      "level": 3,
+      "initiative": 21,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 140,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 293,
+          "y": 140,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 261,
+          "y": 377,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 273,
+          "y": 427,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Brutal Momentum",
+      "imgName": "brutal-momentum.png",
+      "counters": [],
+      "losable": false,
+      "level": 7,
+      "initiative": 52,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 251,
+          "y": 165,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 266,
+          "y": 136,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Cataclysm",
+      "imgName": "cataclysm.png",
+      "counters": [],
+      "losable": true,
+      "level": 6,
+      "initiative": 26,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 207,
+          "y": 140,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 419,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Clear The Way",
+      "imgName": "clear-the-way.png",
+      "counters": [],
+      "losable": true,
+      "level": 3,
+      "initiative": 43,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 182,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 369,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 288,
+          "y": 369,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Crater",
+      "imgName": "crater.png",
+      "counters": [],
+      "losable": true,
+      "level": 1,
+      "initiative": 61,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 154,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 251,
+          "y": 183,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 263,
+          "y": 412,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Crushing Grasp",
+      "imgName": "crushing-grasp.png",
+      "counters": [],
+      "losable": false,
+      "level": 1,
+      "initiative": 35,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 158,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Dig Pit",
+      "imgName": "dig-pit.png",
+      "counters": [],
+      "losable": false,
+      "level": 6,
+      "initiative": 78,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 261,
+          "y": 401,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Dirt Tornado",
+      "imgName": "dirt-tornado.png",
+      "counters": [],
+      "losable": false,
+      "level": 1,
+      "initiative": 82,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 205,
+          "y": 131,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 261,
+          "y": 434,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Earthen Clod",
+      "imgName": "earthen-clod.png",
+      "counters": [],
+      "losable": false,
+      "level": 1,
+      "initiative": 38,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 160,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 258,
+          "y": 426,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 454,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Explosive Punch",
+      "imgName": "explosive-punch.png",
+      "counters": [],
+      "losable": true,
+      "level": 2,
+      "initiative": 28,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 164,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 433,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Forceful Storm",
+      "imgName": "forceful-storm.png",
+      "counters": [],
+      "losable": true,
+      "level": 0,
+      "initiative": 53,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 244,
+          "y": 155,
+          "abilityLine": 1,
+          "isNumeric": false,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 207,
+          "y": 120,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Heaving Swing",
+      "imgName": "heaving-swing.png",
+      "counters": [],
+      "losable": false,
+      "level": 0,
+      "initiative": 57,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 122,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 151,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Kinetic Assault",
+      "imgName": "kinetic-assault.png",
+      "counters": [],
+      "losable": true,
+      "level": 4,
+      "initiative": 19,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 260,
+          "y": 172,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 266,
+          "y": 216,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 275,
+          "y": 396,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 426,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Lumbering Bash",
+      "imgName": "lumbering-bash.png",
+      "counters": [
+        {
+          "x": 126,
+          "y": 431
+        },
+        {
+          "x": 201,
+          "y": 429
+        },
+        {
+          "x": 274,
+          "y": 429
+        },
+        {
+          "x": 164,
+          "y": 489
+        },
+        {
+          "x": 237,
+          "y": 490
+        }
+      ],
+      "losable": false,
+      "level": 8,
+      "initiative": 85,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 262,
+          "y": 150,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        },
+        {
+          "x": 265,
+          "y": 189,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Massive Boulder",
+      "imgName": "massive-boulder.png",
+      "counters": [],
+      "losable": false,
+      "level": 1,
+      "initiative": 87,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 266,
+          "y": 129,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 158,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 434,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Meteor",
+      "imgName": "meteor.png",
+      "counters": [],
+      "losable": true,
+      "level": 7,
+      "initiative": 23,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 265,
+          "y": 174,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 422,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Natures Lift",
+      "imgName": "natures-lift.png",
+      "counters": [
+        {
+          "x": 146,
+          "y": 442
+        },
+        {
+          "x": 219,
+          "y": 442
+        },
+        {
+          "x": 292,
+          "y": 442
+        },
+        {
+          "x": 109,
+          "y": 497
+        },
+        {
+          "x": 181,
+          "y": 497
+        },
+        {
+          "x": 256,
+          "y": 498
+        }
+      ],
+      "losable": false,
+      "level": 0,
+      "initiative": 64,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 257,
+          "y": 162,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 249,
+          "y": 191,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 218,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Opposing Strike",
+      "imgName": "opposing-strike.png",
+      "counters": [
+        {
+          "x": 146,
+          "y": 430
+        },
+        {
+          "x": 219,
+          "y": 430
+        },
+        {
+          "x": 292,
+          "y": 430
+        },
+        {
+          "x": 109,
+          "y": 489
+        },
+        {
+          "x": 182,
+          "y": 489
+        },
+        {
+          "x": 255,
+          "y": 490
+        }
+      ],
+      "losable": false,
+      "level": 1,
+      "initiative": 46,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 197,
+          "y": 175,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 229,
+          "y": 175,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Petrify",
+      "imgName": "petrify.png",
+      "counters": [],
+      "losable": true,
+      "level": 5,
+      "initiative": 47,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 262,
+          "y": 400,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Pulverize",
+      "imgName": "pulverize.png",
+      "counters": [],
+      "losable": true,
+      "level": 9,
+      "initiative": 31,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 265,
+          "y": 116,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 144,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 265,
+          "y": 366,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 265,
+          "y": 476,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Rock Slide",
+      "imgName": "rock-slide.png",
+      "counters": [],
+      "losable": false,
+      "level": 4,
+      "initiative": 81,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Rock Tunnel",
+      "imgName": "rock-tunnel.png",
+      "counters": [],
+      "losable": true,
+      "level": 1,
+      "initiative": 41,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 261,
+          "y": 364,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Rocky End",
+      "imgName": "rocky-end.png",
+      "counters": [],
+      "losable": true,
+      "level": 8,
+      "initiative": 37,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": []
+    },
+    {
+      "title": "Rumbling Advance",
+      "imgName": "rumbling-advance.png",
+      "counters": [],
+      "losable": false,
+      "level": 1,
+      "initiative": 29,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 258,
+          "y": 153,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 250,
+          "y": 183,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 262,
+          "y": 381,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": true
+        }
+      ]
+    },
+    {
+      "title": "Sentient Growth",
+      "imgName": "sentient-growth.png",
+      "counters": [],
+      "losable": false,
+      "level": 2,
+      "initiative": 78,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 251,
+          "y": 175,
+          "abilityLine": 1,
+          "isNumeric": false,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 213,
+          "y": 130,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 203,
+          "y": 204,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 254,
+          "y": 411,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": false,
+          "canTargetAllies": true,
+          "isMovement": false
+        },
+        {
+          "x": 264,
+          "y": 478,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Stone Pummel",
+      "imgName": "stone-pummel.png",
+      "counters": [
+        {
+          "x": 180,
+          "y": 429
+        },
+        {
+          "x": 254,
+          "y": 430
+        },
+        {
+          "x": 144,
+          "y": 489
+        },
+        {
+          "x": 216,
+          "y": 490
+        }
+      ],
+      "losable": false,
+      "level": 5,
+      "initiative": 32,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 208,
+          "y": 231,
+          "abilityLine": 1,
+          "isNumeric": false,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 317,
+          "y": 162,
+          "abilityLine": 1,
+          "isNumeric": false,
+          "canTargetEnemies": false,
+          "canTargetAllies": false,
+          "isMovement": false
+        },
+        {
+          "x": 200,
+          "y": 154,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    },
+    {
+      "title": "Unstable Upheaval",
+      "imgName": "unstable-upheaval.png",
+      "counters": [],
+      "losable": true,
+      "level": 1,
+      "initiative": 13,
+      "permanent": false,
+      "recoverable": true,
+      "enhancementPositions": [
+        {
+          "x": 267,
+          "y": 115,
+          "abilityLine": 0,
+          "isNumeric": true,
+          "canTargetEnemies": true,
+          "canTargetAllies": false,
+          "isMovement": false
+        }
+      ]
+    }
+  ]
+}

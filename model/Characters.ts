@@ -2,6 +2,7 @@ import { CardList } from "./CardList";
 import beastTyrantCards from "./cards/beasttyrant.json";
 import berserkerCards from "./cards/berserker.json";
 import bruteCards from "./cards/brute.json"
+import cragheartCards from "./cards/cragheart.json";
 import nightshroudCards from "./cards/nightshroud.json";
 import quartermasterCards from "./cards/quartermaster.json";
 
@@ -73,10 +74,19 @@ export const Quartermaster: Character = {
   handLimit: 9
 }
 
+export const Cragheart: Character = {
+  id: 6,
+  name: Characters.Cragheart,
+  prefix: "ch",
+  cards: cragheartCards as CardList,
+  handLimit: 11
+}
+
 export const CharacterList = [
   BeastTyrant,
   Berserker,
   Brute,
+  Cragheart,
   Nightshroud,
   Quartermaster
 ]
