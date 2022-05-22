@@ -17,6 +17,7 @@ interface CardProps {
   character?: Character;
   onInitiativeClick?: () => void;
   initiativeDetailLevel?: InitiativeDetailLevel;
+  infoTexts?: Array<string>;
 }
 
 export default function Card({
@@ -29,6 +30,7 @@ export default function Card({
   character,
   onInitiativeClick,
   initiativeDetailLevel,
+  infoTexts,
 }: CardProps) {
   const position = card.counters[counter && counter > 0 ? counter - 1 : -1] || {
     x: 0,
@@ -59,6 +61,13 @@ export default function Card({
             }}
             className="w-[10%] aspect-square bg-green-400 absolute rounded-full -translate-x-1/2 -translate-y-1/2"
           />
+        )}
+        {infoTexts && (
+          <div className="text-center">
+            {infoTexts.map((infoText) => (
+              <p key={infoText}>{infoText}</p>
+            ))}
+          </div>
         )}
       </div>
       {initiativeDetailLevel !== undefined &&
